@@ -2,88 +2,24 @@
    KAIROS KINGDOM
    Main Styling
 ========================================= */
-.container {
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;600;700;800&display=swap');
 
 
 :root {
 
-    --background: #07140f;
-    --background-light: #10291e;
+    --background:#07140f;
+    --green:#3ddc84;
+    --gold:#d4af37;
 
-    --green: #3ddc84;
-    --gold: #d4af37;
+    --white:#ffffff;
+    --muted:#b8c4be;
 
-    --white: #ffffff;
-    --muted: #b8c4be;
-
-   --glass: rgba(255,255,255,0.12);
-    --border: rgba(255,255,255,0.15);
-
-}
-body {
-
-    font-family:'Inter', sans-serif;
-
-    background:
-    linear-gradient(
-        rgba(7,20,15,0.88),
-        rgba(7,20,15,0.92)
-    ),
-    url("https://images.unsplash.com/photo-1504052434569-70ad5836ab65");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-attachment:fixed;
-
-    color:var(--white);
-
-    overflow-x:hidden;
-
-}
-.hero {
-
-    position:relative;
-
-    min-height:100vh;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    padding:120px 20px;
+    --glass:rgba(255,255,255,0.10);
+    --border:rgba(255,255,255,0.15);
 
 }
 
-
-.hero::before {
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-    radial-gradient(
-        circle,
-        transparent 20%,
-        rgba(7,20,15,.8)
-    );
-
-    pointer-events:none;
-
-}
 
 /* Reset */
 
@@ -105,14 +41,38 @@ html {
 
 body {
 
-    font-family:'Inter', sans-serif;
+    font-family:'Inter',sans-serif;
 
     background:
-    radial-gradient(circle at top, #173c29, var(--background));
+    linear-gradient(
+        rgba(7,20,15,.88),
+        rgba(7,20,15,.95)
+    ),
+    url("https://images.unsplash.com/photo-1504052434569-70ad5836ab65");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
 
     color:var(--white);
 
     overflow-x:hidden;
+
+}
+
+
+
+/* Container */
+
+.container {
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
 
 }
 
@@ -124,7 +84,7 @@ h1,
 h2,
 h3 {
 
-    font-family:'Cormorant Garamond', serif;
+    font-family:'Cormorant Garamond',serif;
 
 }
 
@@ -173,13 +133,11 @@ nav {
 
     padding:18px 30px;
 
-
     display:flex;
 
     justify-content:space-between;
 
     align-items:center;
-
 
     background:var(--glass);
 
@@ -195,8 +153,6 @@ nav {
 
 
 .logo {
-
-    font-size:1.3rem;
 
     font-weight:800;
 
@@ -223,8 +179,6 @@ nav a {
     color:white;
 
     text-decoration:none;
-
-    transition:.3s;
 
 }
 
@@ -317,10 +271,6 @@ button:hover {
 
     letter-spacing:5px;
 
-    font-size:.8rem;
-
-    margin-bottom:30px;
-
 }
 
 
@@ -358,6 +308,13 @@ section {
 }
 
 
+section h2 {
+
+    text-align:center;
+
+}
+
+
 
 /* Verse */
 
@@ -380,10 +337,6 @@ blockquote {
 
     font-size:2.5rem;
 
-    color:white;
-
-    transition:.4s;
-
 }
 
 
@@ -404,8 +357,6 @@ blockquote {
 
 .card,
 .resource {
-   box-shadow:
-0 20px 50px rgba(0,0,0,.25);
 
     background:var(--glass);
 
@@ -414,7 +365,6 @@ blockquote {
     border-radius:25px;
 
     padding:35px;
-
 
     backdrop-filter:blur(15px);
 
@@ -452,10 +402,6 @@ blockquote {
     border-radius:50px;
 
     border:none;
-
-    font-size:1rem;
-
-    margin-right:10px;
 
 }
 
@@ -524,34 +470,5 @@ footer {
         font-size:1.8rem;
 
     }
-
-/* Global centering fix */
-
-.heroContent,
-.verse,
-.topics,
-.search,
-.resources,
-.cta {
-
-    width:90%;
-    max-width:1200px;
-    margin-left:auto;
-    margin-right:auto;
-
-}
-
-
-.cardGrid,
-.resourceGrid {
-
-    width:100%;
-
-}
-
-
-section h2 {
-
-    text-align:center;
 
 }
