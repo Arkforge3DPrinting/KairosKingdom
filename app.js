@@ -62,6 +62,8 @@ setInterval(changeVerse,8000);
 
 
 
+
+
 // ===============================
 // Bible Search Engine
 // ===============================
@@ -100,7 +102,6 @@ fetch("bible.json")
 const searchButton = document.querySelector(".search button");
 
 const searchInput = document.querySelector(".search input");
-
 
 
 const results = document.createElement("div");
@@ -170,7 +171,6 @@ searchButton.addEventListener("click",()=>{
             ${verse.chapter}:${verse.verse}
             </h3>
 
-
             <p>
             ${verse.text}
             </p>
@@ -178,7 +178,6 @@ searchButton.addEventListener("click",()=>{
         </div>
 
     `).join("");
-
 
 
 });
