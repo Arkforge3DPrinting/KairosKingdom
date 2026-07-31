@@ -471,4 +471,19 @@ footer {
 
     }
 
+#searchResults {
+
+    margin-top:40px;
+
+    display:grid;
+
+    gap:20px;
+
+}
+
+
+#searchResults .card {
+
+    text-align:left;
+
 }
