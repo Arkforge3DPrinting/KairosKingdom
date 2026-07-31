@@ -21,7 +21,9 @@
     --border: rgba(255,255,255,0.15);
 
 }
-
+body {
+    border: 5px solid red;
+}
 
 /* Reset */
 
