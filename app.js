@@ -62,25 +62,123 @@ setInterval(changeVerse,8000);
 
 
 
-// Bible Search button
+// ===============================
+// Bible Search Engine
+// ===============================
+
+
+let bible = [];
+
+
+fetch("bible.json")
+
+.then(response => response.json())
+
+.then(data => {
+
+    bible = data.verses;
+
+    console.log(
+        "Bible loaded:",
+        bible.length,
+        "verses"
+    );
+
+})
+
+.catch(error => {
+
+    console.error(
+        "Bible failed loading:",
+        error
+    );
+
+});
+
+
 
 const searchButton = document.querySelector(".search button");
+
 const searchInput = document.querySelector(".search input");
+
+
+
+const results = document.createElement("div");
+
+results.id = "searchResults";
+
+
+document.querySelector(".search")
+.appendChild(results);
+
 
 
 searchButton.addEventListener("click",()=>{
 
-    let search = searchInput.value.trim();
+
+    const search = searchInput.value
+    .toLowerCase()
+    .trim();
+
 
 
     if(search === ""){
-        alert("Please enter a Bible topic or verse.");
+
+        results.innerHTML =
+        "<p>Please enter a Bible search.</p>";
+
         return;
+
     }
 
 
-    alert(
-        "Searching Scripture for: " + search
-    );
+
+    const matches = bible.filter(verse =>
+
+        verse.text
+        .toLowerCase()
+        .includes(search)
+
+        ||
+
+        verse.book_name
+        .toLowerCase()
+        .includes(search)
+
+    )
+    .slice(0,20);
+
+
+
+    if(matches.length === 0){
+
+        results.innerHTML =
+        "<p>No verses found.</p>";
+
+        return;
+
+    }
+
+
+
+    results.innerHTML = matches.map(verse => `
+
+        <div class="card">
+
+            <h3>
+            ${verse.book_name}
+            ${verse.chapter}:${verse.verse}
+            </h3>
+
+
+            <p>
+            ${verse.text}
+            </p>
+
+        </div>
+
+    `).join("");
+
+
 
 });
