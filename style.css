@@ -2,7 +2,11 @@
    KAIROS KINGDOM
    Main Styling
 ========================================= */
-
+.container {
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@300;400;600;700;800&display=swap');
 
 
