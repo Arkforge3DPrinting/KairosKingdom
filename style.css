@@ -467,4 +467,33 @@ footer {
 
     }
 
+/* Global centering fix */
+
+.heroContent,
+.verse,
+.topics,
+.search,
+.resources,
+.cta {
+
+    width:90%;
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+
+.cardGrid,
+.resourceGrid {
+
+    width:100%;
+
+}
+
+
+section h2 {
+
+    text-align:center;
+
 }
