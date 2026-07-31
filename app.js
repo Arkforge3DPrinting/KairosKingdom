@@ -1,184 +1,86 @@
-// ================================
-// Kairos Community
-// app.js
-// ================================
+// Kairos Kingdom App
 
-// Smooth scroll for internal links
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-    link.addEventListener('click', e => {
-
-        e.preventDefault();
-
-        const target = document.querySelector(link.getAttribute('href'));
-
-        if(target){
-
-            target.scrollIntoView({
-
-                behavior: 'smooth'
-
-            });
-
-        }
-
-    });
-
-});
+console.log("Kairos Kingdom loaded");
 
 
-// ======================================
-// Fade in sections when scrolling
-// ======================================
+// Verse of the Day rotation
 
-const observer = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add("visible");
-
-        }
-
-    });
-
-},{
-
-    threshold:0.15
-
-});
-
-document.querySelectorAll("section").forEach(section=>{
-
-    observer.observe(section);
-
-});
-
-
-// ======================================
-// Verse Rotator
-// ======================================
-
-const verses=[
-
-{
-text:"Trust in the Lord with all your heart and lean not on your own understanding.",
-ref:"Proverbs 3:5"
-},
-
-{
-text:"Be strong and courageous. Do not be afraid.",
-ref:"Joshua 1:9"
-},
-
-{
-text:"Come to me, all who are weary and burdened, and I will give you rest.",
-ref:"Matthew 11:28"
-},
-
-{
-text:"Your word is a lamp to my feet and a light to my path.",
-ref:"Psalm 119:105"
-}
-
+const verses = [
+    {
+        text: "Trust in the Lord with all your heart and lean not on your own understanding.",
+        reference: "Proverbs 3:5"
+    },
+    {
+        text: "Your word is a lamp for my feet, a light on my path.",
+        reference: "Psalm 119:105"
+    },
+    {
+        text: "Come to me, all you who are weary and burdened, and I will give you rest.",
+        reference: "Matthew 11:28"
+    },
+    {
+        text: "I can do all things through Christ who strengthens me.",
+        reference: "Philippians 4:13"
+    }
 ];
 
-const quote=document.querySelector(".verse blockquote");
 
-const reference=document.querySelector(".verse p");
+let verseIndex = 0;
 
-let verseIndex=0;
+
+const verseText = document.querySelector(".verse blockquote");
+const verseReference = document.querySelector(".verse p");
+
 
 function changeVerse(){
 
     verseIndex++;
 
-    if(verseIndex>=verses.length){
-
-        verseIndex=0;
-
+    if(verseIndex >= verses.length){
+        verseIndex = 0;
     }
 
-    quote.style.opacity=0;
 
-    reference.style.opacity=0;
+    verseText.style.opacity = 0;
+    verseReference.style.opacity = 0;
+
 
     setTimeout(()=>{
 
-        quote.textContent=`"${verses[verseIndex].text}"`;
+        verseText.innerHTML = `"${verses[verseIndex].text}"`;
+        verseReference.innerHTML = verses[verseIndex].reference;
 
-        reference.textContent=verses[verseIndex].ref;
-
-        quote.style.opacity=1;
-
-        reference.style.opacity=1;
+        verseText.style.opacity = 1;
+        verseReference.style.opacity = 1;
 
     },400);
 
 }
 
+
 setInterval(changeVerse,8000);
 
 
-// ======================================
-// Search Button
-// ======================================
 
-const searchButton=document.querySelector(".search button");
+// Bible Search button
 
-const searchInput=document.querySelector(".search input");
+const searchButton = document.querySelector(".search button");
+const searchInput = document.querySelector(".search input");
+
 
 searchButton.addEventListener("click",()=>{
 
-    const value=searchInput.value.trim();
+    let search = searchInput.value.trim();
 
-    if(value===""){
 
-        alert("Enter a Bible topic or verse.");
-
+    if(search === ""){
+        alert("Please enter a Bible topic or verse.");
         return;
-
     }
 
-    alert("Bible search for: "+value);
+
+    alert(
+        "Searching Scripture for: " + search
+    );
 
 });
-
-
-// Enter key support
-
-searchInput.addEventListener("keypress",e=>{
-
-    if(e.key==="Enter"){
-
-        searchButton.click();
-
-    }
-
-});
-
-
-// ======================================
-// Hero Background Parallax
-// ======================================
-
-window.addEventListener("scroll",()=>{
-
-    const hero=document.querySelector(".hero");
-
-    hero.style.backgroundPositionY=
-        window.scrollY*0.4+"px";
-
-});
-
-
-// ======================================
-// Dynamic Copyright
-// ======================================
-
-const footer=document.querySelector("footer p");
-
-footer.innerHTML=`© ${new Date().getFullYear()} Kairos`;
-
-console.log("Kairos Loaded");
