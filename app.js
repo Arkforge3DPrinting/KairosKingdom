@@ -375,94 +375,16 @@ function formatReference(id){
 
 }
 
-function openStudy(){
-
-    document.querySelector(".layout").style.display = "none";
-
-    document.getElementById("studyPanel").style.display="block";
-
 function formatReference(id){
 
     const parts = id.split("_");
 
     return `${parts[0]} ${parts[1]}:${parts[2]}`;
 
-    loadStudyData();
-
 }
 
 
 
-function loadStudyData(){
-
-
-    const highlightList =
-        document.getElementById("highlightList");
-
-
-    const noteList =
-        document.getElementById("noteList");
-
-
-    const highlights = JSON.parse(
-        localStorage.getItem("arkstudy_highlights") || "[]"
-    );
-
-
-    const notes = JSON.parse(
-        localStorage.getItem("arkstudy_notes") || "{}"
-    );
-
-
-    highlightList.innerHTML = "";
-
-
-    highlights.forEach(id => {
-
-
-        highlightList.innerHTML += `
-
-        <div class="study-item">
-
-            🖍 ${id}
-
-        </div>
-
-        `;
-
-
-    });
-
-
-
-    noteList.innerHTML = "";
-
-
-    Object.entries(notes).forEach(([id,note]) => {
-
-
-        noteList.innerHTML += `
-
-        <div class="study-item">
-
-            <div class="study-reference">
-
-            ${id}
-
-            </div>
-
-
-            ${note}
-
-        </div>
-
-        `;
-
-
-    });
-
-
-}
 function openStudy(){
 
     document.querySelector(".layout").style.display = "none";
@@ -499,25 +421,19 @@ function loadStudyData(){
     highlightList.innerHTML = "";
 
 
-   highlights.forEach(id => {
+    highlights.forEach(id => {
 
-    const parts = id.split("_");
+        highlightList.innerHTML += `
 
-    const reference = 
-        `${parts[0]} ${parts[1]}:${parts[2]}`;
+        <div class="study-item">
 
+            🖍 ${formatReference(id)}
 
-    highlightList.innerHTML += `
+        </div>
 
-    <div class="study-item">
+        `;
 
-        🖍 ${reference}
-
-    </div>
-
-    `;
-
-});
+    });
 
 
 
@@ -526,21 +442,24 @@ function loadStudyData(){
 
     Object.entries(notes).forEach(([id,note]) => {
 
+
         noteList.innerHTML += `
 
         <div class="study-item">
 
             <div class="study-reference">
 
-    ${formatReference(id)}
+                ${formatReference(id)}
 
-</div>
+            </div>
+
 
             ${note}
 
         </div>
 
         `;
+
 
     });
 
