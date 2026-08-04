@@ -132,11 +132,11 @@ function openChapter(book, chapter){
         const isHighlighted = highlights.includes(verseID);
 
 
-        verseContent.innerHTML += `
+verseContent.innerHTML += `
 
-        <div class="verse ${isHighlighted ? "highlight" : ""}"
-        data-id="${verseID}"
-        onclick="showVerseMenu(this)">
+<div class="verse ${isHighlighted ? "highlight" : ""}"
+data-id="${verseID}"
+onclick="console.log('VERSE CLICKED'); showVerseMenu(this)">
 
             <span class="verse-number">
             ${v.verse}
