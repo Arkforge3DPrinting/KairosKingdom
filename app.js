@@ -454,147 +454,117 @@ function loadStudyData(){
     const highlightList =
         document.getElementById("highlightList");
 
-
     const noteList =
         document.getElementById("noteList");
-
 
     const highlights = JSON.parse(
         localStorage.getItem("arkstudy_highlights") || "[]"
     );
 
-
     const notes = JSON.parse(
         localStorage.getItem("arkstudy_notes") || "{}"
     );
 
+    highlightList.innerHTML = "";
+    noteList.innerHTML = "";
 
-   highlightList.innerHTML = "";
+    // Group highlights by book
+    const groupedHighlights = {};
 
+    highlights.forEach(id => {
 
-const groupedHighlights = {};
+        const parts = id.split("_");
 
+        const book = parts[0];
+        const chapter = Number(parts[1]);
+        const verse = Number(parts[2]);
 
-highlights.forEach(id => {
-
-    const book = getBookFromId(id);
-
-
-    if(!groupedHighlights[book]){
-
-        groupedHighlights[book] = [];
-
-    }
-
-
-    groupedHighlights[book].push(id);
-
-});
-
-
-
-Object.entries(groupedHighlights).forEach(([book, verses]) => {
-
-
-highlightList.innerHTML = "";
-
-
-const groupedHighlights = {};
-
-
-highlights.forEach(id => {
-
-    const parts = id.split("_");
-
-    const book = parts[0];
-    const chapter = Number(parts[1]);
-    const verse = Number(parts[2]);
-
-
-    if(!groupedHighlights[book]){
-
-        groupedHighlights[book] = [];
-
-    }
-
-
-    groupedHighlights[book].push({
-        id,
-        chapter,
-        verse
-    });
-
-});
-
-
-
-Object.entries(groupedHighlights)
-
-.sort(([bookA],[bookB]) => 
-    bookA.localeCompare(bookB)
-)
-
-.forEach(([book, verses]) => {
-
-
-    highlightList.innerHTML += `
-
-        <h3 class="study-book">
-            📖 ${book}
-        </h3>
-
-    `;
-
-
-    verses.sort((a,b)=>{
-
-        if(a.chapter !== b.chapter){
-
-            return a.chapter - b.chapter;
-
+        if(!groupedHighlights[book]){
+            groupedHighlights[book] = [];
         }
 
-        return a.verse - b.verse;
+        groupedHighlights[book].push({
+            id,
+            chapter,
+            verse
+        });
 
     });
 
+    // Display books alphabetically
+    const bookOrder = [
+    ...new Set(
+        bibleVerses.map(v => v.book_name)
+    )
+];
 
+Object.entries(groupedHighlights)
+.sort(([a],[b]) =>
 
-    verses.forEach(item => {
+    bookOrder.indexOf(a) - bookOrder.indexOf(b)
 
+)
+.forEach(([book, verses]) => {
 
         highlightList.innerHTML += `
-
-        <div 
-            class="study-item"
-            onclick="openSavedVerse('${item.id}')"
-        >
-
-            🖍 ${formatReference(item.id)}
-
-        </div>
-
+            <h3 class="study-book">📖 ${book}</h3>
         `;
 
+        verses.sort((a,b)=>{
+
+            if(a.chapter !== b.chapter){
+                return a.chapter - b.chapter;
+            }
+
+            return a.verse - b.verse;
+
+        });
+
+        verses.forEach(item => {
+
+            highlightList.innerHTML += `
+                <div
+                    class="study-item"
+                    onclick="openSavedVerse('${item.id}')"
+                >
+                    🖍 ${formatReference(item.id)}
+                </div>
+            `;
+
+        });
 
     });
 
+    // Notes
+    Object.entries(notes).forEach(([id,note]) => {
 
-});
+        noteList.innerHTML += `
+            <div class="study-item">
+
+                <div class="study-reference">
+                    ${formatReference(id)}
+                </div>
+
+                ${note}
+
+            </div>
+        `;
+
+    });
+
+}
 loadBible();
-
 
 document
 .getElementById("searchButton")
 .onclick = searchBible;
 
-
 document
 .getElementById("studyButton")
 .onclick = openStudy;
 
-
-const backButton = document.getElementById("backBibleButton");
+const backButton =
+    document.getElementById("backBibleButton");
 
 if(backButton){
 
