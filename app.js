@@ -248,12 +248,20 @@ function highlightVerse(element){
 
     if(element.classList.contains("highlight")){
 
-        highlights.push(text);
+
+        if(!highlights.includes(text)){
+
+            highlights.push(text);
+
+        }
+
 
     }
     else{
 
+
         const index = highlights.indexOf(text);
+
 
         if(index > -1){
 
@@ -268,7 +276,6 @@ function highlightVerse(element){
         "arkstudy_highlights",
         JSON.stringify(highlights)
     );
-
 
 }
 
