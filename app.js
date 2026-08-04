@@ -430,6 +430,7 @@ function openSavedVerse(id){
     const book = parts[0];
 
     const chapter = Number(parts[1]);
+const verse = Number(parts[2]);
 
 
     document.querySelector(".layout").style.display = "flex";
@@ -443,6 +444,34 @@ function openSavedVerse(id){
     setTimeout(() => {
 
         openChapter(book, chapter);
+
+
+setTimeout(()=>{
+
+    const target =
+    document.querySelector(`[data-id="${id}"]`);
+
+
+    if(target){
+
+        target.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+
+        target.style.outline =
+        "3px solid #b8863b";
+
+        setTimeout(()=>{
+
+            target.style.outline="";
+
+        },2000);
+
+    }
+
+
+},300);
 
     },100);
 
