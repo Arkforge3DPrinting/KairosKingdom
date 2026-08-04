@@ -47,8 +47,11 @@ async function loadBible(){
 
 function openBook(book){
 
-
     document.getElementById("bookTitle").textContent = book;
+
+
+    document.getElementById("verseContent").innerHTML = 
+        "Select a chapter to begin.";
 
 
     const chapters = [...new Set(
@@ -62,9 +65,12 @@ function openBook(book){
     )];
 
 
-    const chapterList = document.getElementById("chapterList");
+const chapterList = document.getElementById("chapterList");
 
-    chapterList.innerHTML = "";
+chapterList.innerHTML = "";
+
+document.getElementById("verseContent").innerHTML =
+    "Select a chapter to begin.";
 
 
     chapters.forEach(chapter => {
@@ -107,6 +113,7 @@ function openChapter(book, chapter){
 
     const verseContent = document.getElementById("verseContent");
 
+    verseContent.scrollTop = 0;
 
     verseContent.innerHTML = `
 
