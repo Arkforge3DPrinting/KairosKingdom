@@ -143,7 +143,7 @@ const isHighlighted = savedHighlights.includes(verseText);
 verseContent.innerHTML += `
 
 <div class="verse ${isHighlighted ? "highlight" : ""}"
-onclick="highlightVerse(this)">
+onclick="showVerseMenu(this)">
 
     <span class="verse-number">
 
