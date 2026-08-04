@@ -814,49 +814,59 @@ header p {
     }
 
 
- .reader {
-
-    padding:35px;
-
-}
-
+.reader {
+   
+    position:relative;
 
 }
+
 /* =========================
    MY STUDY FOLDER TAB
 ========================= */
 
 .folder-tab {
 
-    display:inline-block;
+    position:absolute;
 
-    margin-bottom:20px;
+    top:-35px;
+
+    left:35px;
+
 
     background:#e7c98b;
 
     color:#3b2f1d;
 
-    padding:12px 28px;
 
-    border-radius:16px 16px 0 0;
+    padding:12px 30px;
+
+
+    border-radius:18px 18px 0 0;
+
 
     font-weight:700;
 
+
     cursor:pointer;
 
+
     box-shadow:
-        inset 0 -3px 0 rgba(0,0,0,.08);
+        0 -5px 15px rgba(0,0,0,.12);
+
 
     transition:.2s;
+
+
+    z-index:5;
 
 }
 
 
 .folder-tab:hover {
 
-    background:#f1d9a7;
+    transform:translateY(-5px);
 
-    transform:translateY(-3px);
+    background:#f1d9a7;
 
 }
 
