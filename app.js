@@ -4,7 +4,11 @@ async function loadBible(){
 
     const bible = await response.json();
 
-    console.log(bible);
+    console.log("Metadata:");
+    console.log(bible.metadata);
+
+    console.log("First verse:");
+    console.log(bible.verses[0]);
 
 }
 
