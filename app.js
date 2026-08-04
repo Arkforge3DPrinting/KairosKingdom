@@ -536,21 +536,69 @@ Object.entries(groupedHighlights)
     });
 
     // Notes
-    Object.entries(notes).forEach(([id,note]) => {
+const groupedNotes = {};
+
+Object.entries(notes).forEach(([id, note]) => {
+
+    const parts = id.split("_");
+
+    const book = parts[0];
+    const chapter = Number(parts[1]);
+    const verse = Number(parts[2]);
+
+    if(!groupedNotes[book]){
+        groupedNotes[book] = [];
+    }
+
+    groupedNotes[book].push({
+        id,
+        note,
+        chapter,
+        verse
+    });
+
+});
+
+
+Object.entries(groupedNotes)
+.sort(([a],[b]) =>
+
+    bookOrder.indexOf(a) - bookOrder.indexOf(b)
+
+)
+.forEach(([book, verses]) => {
+
+    noteList.innerHTML += `
+        <h3 class="study-book">📖 ${book}</h3>
+    `;
+
+    verses.sort((a,b) => {
+
+        if(a.chapter !== b.chapter){
+            return a.chapter - b.chapter;
+        }
+
+        return a.verse - b.verse;
+
+    });
+
+    verses.forEach(item => {
 
         noteList.innerHTML += `
             <div class="study-item">
 
                 <div class="study-reference">
-                    ${formatReference(id)}
+                    ${formatReference(item.id)}
                 </div>
 
-                ${note}
+                ${item.note}
 
             </div>
         `;
 
     });
+
+});
 
 }
 loadBible();
