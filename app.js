@@ -392,55 +392,29 @@ function saveNote(){
         document.getElementById("noteInput").value;
 
 
- localStorage.setItem(
-    "arkstudy_notes",
-    JSON.stringify(notes)
-);
+    localStorage.setItem(
+        "arkstudy_notes",
+        JSON.stringify(notes)
+    );
 
 
-document.getElementById("noteBox").style.display = "none";
+    document.getElementById("noteBox").style.display = "none";
 
 
-openChapter(
-    selectedVerse.dataset.id.split("_")[0],
-    Number(selectedVerse.dataset.id.split("_")[1])
-);
+    const parts = selectedVerse.dataset.id.split("_");
 
-if(document.getElementById("studyPanel").style.display === "block"){
-    loadStudyData();
-}
+    const book = parts[0];
+    const chapter = Number(parts[1]);
 
 
-    // Refresh study page if it is open
-    loadStudyData();
-
-}
-function formatReference(id){
-
-    const parts = id.split("_");
-
-    return `${parts[0]} ${parts[1]}:${parts[2]}`;
-
-}
+    openChapter(book, chapter);
 
 
-function getBookFromId(id){
+    if(document.getElementById("studyPanel").style.display === "block"){
 
-    const parts = id.split("_");
+        loadStudyData();
 
-    return parts[0];
-
-}
-
-
-
-function openStudy(){
-
-    document.querySelector(".layout").style.display = "none";
-
-    document.getElementById("studyPanel").style.display = "block";
-
-    loadStudyData();
+    }
 
 }
 
