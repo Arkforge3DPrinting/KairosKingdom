@@ -831,3 +831,65 @@ header p {
 
 
 }
+/* =========================
+   MY STUDY FOLDER TAB
+========================= */
+
+.folder-tab {
+
+    position:absolute;
+
+    top:115px;
+
+    right:50px;
+
+    background:#e7c98b;
+
+    color:#3b2f1d;
+
+    padding:14px 28px;
+
+    border-radius:18px 18px 0 0;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 -5px 20px rgba(0,0,0,.15);
+
+    transition:.25s;
+
+    z-index:10;
+
+}
+
+
+.folder-tab:hover {
+
+    transform:translateY(-8px);
+
+    background:#f1d9a7;
+
+}
+
+
+/* little paper edge */
+
+.folder-tab::after {
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-10px;
+
+    left:0;
+
+    width:100%;
+
+    height:10px;
+
+    background:#e7c98b;
+
+}
