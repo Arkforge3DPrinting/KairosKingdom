@@ -40,6 +40,7 @@ async function loadBible(){
 
     });
 
+
 }
 
 
@@ -73,7 +74,7 @@ function openBook(book){
 
         button.className = "chapter";
 
-        button.textContent = chapter;
+        button.textContent = "Chapter " + chapter;
 
 
         button.onclick = () => {
@@ -145,4 +146,89 @@ function openChapter(book, chapter){
 
 
 
+function searchBible(){
+
+
+    const query = document
+
+        .getElementById("searchInput")
+
+        .value
+
+        .toLowerCase()
+
+        .trim();
+
+
+    if(!query){
+
+        return;
+
+    }
+
+
+    const results = bibleVerses.filter(v =>
+
+        v.text
+
+        .toLowerCase()
+
+        .includes(query)
+
+    );
+
+
+    const verseContent = document.getElementById("verseContent");
+
+
+    verseContent.innerHTML = `
+
+        <h3 class="chapter-title">
+
+        Search Results (${results.length})
+
+        </h3>
+
+    `;
+
+
+    results.slice(0,100).forEach(v => {
+
+
+        verseContent.innerHTML += `
+
+        <div class="search-result">
+
+            <div class="search-reference">
+
+            ${v.book_name} ${v.chapter}:${v.verse}
+
+            </div>
+
+            <div>
+
+            ${v.text}
+
+            </div>
+
+        </div>
+
+        `;
+
+
+    });
+
+
+}
+
+
+
 loadBible();
+
+
+
+document
+
+    .getElementById("searchButton")
+
+    .onclick = searchBible;
