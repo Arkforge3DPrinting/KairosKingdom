@@ -361,6 +361,7 @@ header p {
 
     border-radius:22px;
 
+    position:relative;
 
     padding:35px;
 
@@ -841,34 +842,43 @@ header p {
 
     position:absolute;
 
-    top:0px;
+    top:-45px;
 
-    right:50px;
+    right:40px;
+
 
     background:#e7c98b;
 
     color:#3b2f1d;
 
-    padding:14px 28px;
+
+    padding:14px 30px;
+
 
     border-radius:18px 18px 0 0;
 
+
     font-weight:700;
 
+
     cursor:pointer;
+
 
     box-shadow:
         0 -5px 20px rgba(0,0,0,.15);
 
+
     transition:.25s;
 
-    z-index:10;
+
+    z-index:5;
 
 }
 
+
 .folder-tab:hover {
 
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 
     background:#f1d9a7;
 
