@@ -129,8 +129,12 @@ function openChapter(book, chapter){
 
 
     const highlights = JSON.parse(
-        localStorage.getItem("arkstudy_highlights") || "[]"
-    );
+    localStorage.getItem("arkstudy_highlights") || "[]"
+);
+
+const notes = JSON.parse(
+    localStorage.getItem("arkstudy_notes") || "{}"
+);
 
 
     verses.forEach(v => {
@@ -140,23 +144,35 @@ function openChapter(book, chapter){
 
 
         const isHighlighted = highlights.includes(verseID);
-
+const verseNote = notes[verseID] || "";
 
 verseContent.innerHTML += `
 
 <div class="verse ${isHighlighted ? "highlight" : ""}"
 data-id="${verseID}"
-onclick="console.log('VERSE CLICKED'); showVerseMenu(this)">
+onclick="showVerseMenu(this)">
 
-            <span class="verse-number">
-            ${v.verse}
-            </span>
+    <span class="verse-number">
+    ${v.verse}
+    </span>
 
-            ${v.text}
+    ${v.text}
 
-        </div>
 
-        `;
+    ${
+        verseNote
+        ?
+        `<div class="verse-note">
+            📝 ${verseNote}
+        </div>`
+        :
+        ""
+    }
+
+
+</div>
+
+`;
 
 
     });
