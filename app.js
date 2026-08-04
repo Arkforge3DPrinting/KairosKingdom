@@ -239,7 +239,10 @@ function showVerseMenu(element){
 
 function toggleHighlight(){
 
+    console.log("Highlight button clicked");
+
     if(!selectedVerse){
+        console.log("No verse selected");
         return;
     }
 
