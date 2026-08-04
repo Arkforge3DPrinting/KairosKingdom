@@ -124,17 +124,18 @@ function openChapter(book, chapter){
 
         verseContent.innerHTML += `
 
-        <div class="verse">
+<div class="verse"
+onclick="highlightVerse(this)">
 
-            <span class="verse-number">
+    <span class="verse-number">
 
-            ${v.verse}
+    ${v.verse}
 
-            </span>
+    </span>
 
-            ${v.text}
+    ${v.text}
 
-        </div>
+</div>
 
         `;
 
