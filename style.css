@@ -146,6 +146,7 @@ header p {
 
 
 .search-box button,
+#studyButton,
 #backBibleButton {
 
 
@@ -260,48 +261,7 @@ header p {
 
 
 
-/* =========================
-   MY STUDY FOLDER TAB
-========================= */
 
-
-.folder-tab {
-
-    position:absolute;
-
-    top:0;
-
-    left:25px;
-
-
-    background:#b8872d;
-
-    color:white;
-
-
-    padding:12px 28px;
-
-
-    border-radius:
-        14px 14px 0 0;
-
-
-    font-weight:700;
-
-    font-size:.9rem;
-
-
-    cursor:pointer;
-
-
-    width:max-content;
-
-
-    box-shadow:
-
-        0 -4px 12px rgba(0,0,0,.15);
-
-}
 
 
 
