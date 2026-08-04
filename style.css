@@ -596,21 +596,153 @@ header p {
         translate(-50%,-50%);
 
 
-    width:min(500px,90%);
+    width:min(520px,90%);
 
 
     background:
-        rgba(255,250,240,.95);
+
+        rgba(255,250,240,.92);
 
 
-    padding:25px;
+    backdrop-filter:
+
+        blur(18px);
 
 
-    border-radius:20px;
+    border:
+
+        1px solid rgba(184,134,59,.25);
+
+
+    padding:30px;
+
+
+    border-radius:24px;
 
 
     box-shadow:
-        0 25px 60px rgba(0,0,0,.3);
+
+        0 25px 70px rgba(0,0,0,.25);
+
+
+    z-index:99999;
+
+}
+
+
+
+.note-box textarea {
+
+
+    width:100%;
+
+
+    height:180px;
+
+
+    resize:none;
+
+
+    padding:18px;
+
+
+    border-radius:16px;
+
+
+    border:
+
+        1px solid rgba(184,134,59,.35);
+
+
+    background:
+
+        rgba(255,255,255,.75);
+
+
+    color:#2f2a24;
+
+
+    font-size:1rem;
+
+
+    line-height:1.6;
+
+
+    outline:none;
+
+}
+
+
+
+.note-box textarea:focus {
+
+
+    border-color:#b8863b;
+
+
+    box-shadow:
+
+        0 0 0 3px rgba(184,134,59,.15);
+
+}
+
+
+
+.note-box button {
+
+
+    margin-top:18px;
+
+
+    padding:13px 25px;
+
+
+    border:none;
+
+
+    border-radius:14px;
+
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #b8863b,
+            #8c641d
+        );
+
+
+    color:white;
+
+
+    font-weight:700;
+
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+        0 6px 15px rgba(140,100,29,.3);
+
+
+    transition:.25s;
+
+}
+
+
+
+.note-box button:hover {
+
+
+    transform:
+
+        translateY(-3px);
+
+
+    box-shadow:
+
+        0 10px 25px rgba(140,100,29,.4);
 
 }
 
