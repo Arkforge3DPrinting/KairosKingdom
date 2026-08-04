@@ -815,8 +815,10 @@ header p {
 
 
 .reader {
-   
+
     position:relative;
+
+    padding:35px;
 
 }
 
