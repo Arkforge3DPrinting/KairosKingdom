@@ -514,6 +514,10 @@ function loadStudyData(){
     );
 
 
+    console.log("Highlights:", highlights);
+    console.log("Notes:", notes);
+
+
     studyList.innerHTML = "";
 
 
@@ -528,10 +532,20 @@ function loadStudyData(){
     ];
 
 
+    console.log("Combined verses:", allVerses);
+
+
 
     allVerses.forEach(id => {
 
         const parts = id.split("_");
+
+
+        if(parts.length !== 3){
+            console.log("Bad ID:", id);
+            return;
+        }
+
 
         const book = parts[0];
         const chapter = Number(parts[1]);
@@ -539,19 +553,21 @@ function loadStudyData(){
 
 
         if(!grouped[book]){
-
             grouped[book] = [];
-
         }
 
 
         grouped[book].push({
 
-            id:id,
-            chapter:chapter,
-            verse:verse,
-            highlighted:highlights.includes(id),
-            note:notes[id] || null
+            id,
+            chapter,
+            verse,
+
+            highlighted:
+                highlights.includes(id),
+
+            note:
+                notes[id] || null
 
         });
 
@@ -560,7 +576,9 @@ function loadStudyData(){
 
 
     Object.keys(grouped)
+
     .sort((a,b)=>a.localeCompare(b))
+
     .forEach(book=>{
 
 
@@ -580,50 +598,55 @@ function loadStudyData(){
 
 
         grouped[book]
+
         .sort((a,b)=>{
 
-            if(a.chapter !== b.chapter){
-
-                return a.chapter - b.chapter;
-
-            }
-
-            return a.verse - b.verse;
+            return (
+                a.chapter - b.chapter ||
+                a.verse - b.verse
+            );
 
         })
+
+
         .forEach(item=>{
 
 
             const entry = document.createElement("div");
 
+
             entry.className = "study-item";
 
 
             entry.onclick = () => {
-
                 openSavedVerse(item.id);
-
             };
+
 
 
             entry.innerHTML = `
 
                 <div class="study-reference">
+
                     ${formatReference(item.id)}
-                </div>
-
-
-                <div>
-
-                    ${item.highlighted ? "🖍 Highlighted" : ""}
-
-                   ${item.note ? `
-<div class="study-note">
-📝 ${item.note}
-</div>
-` : ""}
 
                 </div>
+
+
+                ${item.highlighted ? 
+                    "<div>🖍 Highlighted</div>" 
+                    : ""}
+
+
+
+                ${item.note ? 
+
+                    `<div class="study-note">
+                        📝 ${item.note}
+                    </div>`
+
+                    : ""}
+
 
             `;
 
