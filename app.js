@@ -395,6 +395,13 @@ function openStudy(){
     loadStudyData();
 
 }
+function backToBible(){
+
+    document.querySelector(".layout").style.display = "flex";
+
+    document.getElementById("studyPanel").style.display = "none";
+
+}
 
 
 
@@ -475,3 +482,7 @@ document
 document
 .getElementById("studyButton")
 .onclick = openStudy;
+
+document
+.getElementById("backBibleButton")
+.onclick = backToBible;
