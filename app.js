@@ -403,7 +403,32 @@ function backToBible(){
 
 }
 
+function openSavedVerse(id){
 
+    const parts = id.split("_");
+
+
+    const book = parts[0];
+
+    const chapter = Number(parts[1]);
+
+
+    document.querySelector(".layout").style.display = "flex";
+
+    document.getElementById("studyPanel").style.display = "none";
+
+
+    openBook(book);
+
+
+    setTimeout(() => {
+
+        openChapter(book, chapter);
+
+    },100);
+
+
+}
 
 function loadStudyData(){
 
@@ -428,19 +453,22 @@ function loadStudyData(){
     highlightList.innerHTML = "";
 
 
-    highlights.forEach(id => {
+highlights.forEach(id => {
 
-        highlightList.innerHTML += `
+    highlightList.innerHTML += `
 
-        <div class="study-item">
+    <div 
+        class="study-item"
+        onclick="openSavedVerse('${id}')"
+    >
 
-            🖍 ${formatReference(id)}
+        🖍 ${formatReference(id)}
 
-        </div>
+    </div>
 
-        `;
+    `;
 
-    });
+});
 
 
 
