@@ -368,7 +368,89 @@ function saveNote(){
 
 }
 
+function openStudy(){
 
+    document.querySelector(".layout").style.display = "none";
+
+    document.getElementById("studyPanel").style.display="block";
+
+
+    loadStudyData();
+
+}
+
+
+
+function loadStudyData(){
+
+
+    const highlightList =
+        document.getElementById("highlightList");
+
+
+    const noteList =
+        document.getElementById("noteList");
+
+
+    const highlights = JSON.parse(
+        localStorage.getItem("arkstudy_highlights") || "[]"
+    );
+
+
+    const notes = JSON.parse(
+        localStorage.getItem("arkstudy_notes") || "{}"
+    );
+
+
+    highlightList.innerHTML = "";
+
+
+    highlights.forEach(id => {
+
+
+        highlightList.innerHTML += `
+
+        <div class="study-item">
+
+            🖍 ${id}
+
+        </div>
+
+        `;
+
+
+    });
+
+
+
+    noteList.innerHTML = "";
+
+
+    Object.entries(notes).forEach(([id,note]) => {
+
+
+        noteList.innerHTML += `
+
+        <div class="study-item">
+
+            <div class="study-reference">
+
+            ${id}
+
+            </div>
+
+
+            ${note}
+
+        </div>
+
+        `;
+
+
+    });
+
+
+}
 
 loadBible();
 
