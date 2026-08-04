@@ -511,6 +511,11 @@ document
 .getElementById("studyButton")
 .onclick = openStudy;
 
-document
-.getElementById("backBibleButton")
-.onclick = backToBible;
+
+const backButton = document.getElementById("backBibleButton");
+
+if(backButton){
+
+    backButton.onclick = backToBible;
+
+}
