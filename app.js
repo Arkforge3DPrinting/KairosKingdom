@@ -6,16 +6,17 @@ async function loadBible(){
 
     const verses = bible.verses;
 
+
     const books = [...new Set(
-        verses.map(verse => verse.book_name)
+        verses.map(v => v.book_name)
     )];
 
-    console.log("Books found:");
-    console.log(books);
 
     const bookGrid = document.getElementById("bookGrid");
 
+
     books.forEach(book => {
+
 
         const card = document.createElement("div");
 
@@ -23,10 +24,63 @@ async function loadBible(){
 
         card.textContent = book;
 
+
+        card.onclick = () => {
+
+            openBook(book, verses);
+
+        };
+
+
         bookGrid.appendChild(card);
+
 
     });
 
 }
+
+
+
+function openBook(book, verses){
+
+
+    document.getElementById("bookTitle").textContent = book;
+
+
+    const chapters = [...new Set(
+
+        verses
+
+        .filter(v => v.book_name === book)
+
+        .map(v => v.chapter)
+
+    )];
+
+
+    const chapterList = document.getElementById("chapterList");
+
+    chapterList.innerHTML = "";
+
+
+    chapters.forEach(chapter => {
+
+
+        const button = document.createElement("div");
+
+        button.className = "chapter";
+
+        button.textContent = "Chapter " + chapter;
+
+
+        chapterList.appendChild(button);
+
+
+    });
+
+
+}
+
+
 
 loadBible();
