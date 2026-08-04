@@ -392,13 +392,19 @@ function saveNote(){
         document.getElementById("noteInput").value;
 
 
-    localStorage.setItem(
-        "arkstudy_notes",
-        JSON.stringify(notes)
-    );
+ localStorage.setItem(
+    "arkstudy_notes",
+    JSON.stringify(notes)
+);
 
 
-    document.getElementById("noteBox").style.display = "none";
+document.getElementById("noteBox").style.display = "none";
+
+
+openChapter(
+    selectedVerse.dataset.id.split("_")[0],
+    Number(selectedVerse.dataset.id.split("_")[1])
+);
 
 if(document.getElementById("studyPanel").style.display === "block"){
     loadStudyData();
