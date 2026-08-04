@@ -451,23 +451,32 @@ function openSavedVerse(id){
 
 function loadStudyData(){
 
-const studyList =
-    document.getElementById("studyList");
+    const highlightList =
+        document.getElementById("highlightList");
+
+    const noteList =
+        document.getElementById("noteList");
+
 
     const highlights = JSON.parse(
         localStorage.getItem("arkstudy_highlights") || "[]"
     );
 
+
     const notes = JSON.parse(
         localStorage.getItem("arkstudy_notes") || "{}"
     );
 
-    studyList.innerHTML = "";
+
+    highlightList.innerHTML = "";
     noteList.innerHTML = "";
 
-    // Group highlights by book
-    const groupedHighlights = {};
 
+    const grouped = {};
+
+
+
+    // Add highlights
     highlights.forEach(id => {
 
         const parts = id.split("_");
@@ -476,125 +485,147 @@ const studyList =
         const chapter = Number(parts[1]);
         const verse = Number(parts[2]);
 
-        if(!groupedHighlights[book]){
-            groupedHighlights[book] = [];
+
+        if(!grouped[book]){
+            grouped[book] = [];
         }
 
-        groupedHighlights[book].push({
-            id,
+
+        grouped[book].push({
+            id:id,
+            type:"highlight",
             chapter,
             verse
         });
 
     });
 
-    // Display books alphabetically
-    const bookOrder = [
-    ...new Set(
-        bibleVerses.map(v => v.book_name)
+
+
+    // Add notes
+    Object.entries(notes).forEach(([id,note]) => {
+
+        const parts = id.split("_");
+
+        const book = parts[0];
+        const chapter = Number(parts[1]);
+        const verse = Number(parts[2]);
+
+
+        if(!grouped[book]){
+            grouped[book] = [];
+        }
+
+
+        grouped[book].push({
+            id:id,
+            type:"note",
+            chapter,
+            verse,
+            note
+        });
+
+    });
+
+
+
+    Object.entries(grouped)
+
+    .sort(([a],[b]) =>
+        a.localeCompare(b)
     )
-];
 
-Object.entries(groupedHighlights)
-.sort(([a],[b]) =>
+    .forEach(([book, items]) => {
 
-    bookOrder.indexOf(a) - bookOrder.indexOf(b)
 
-)
-.forEach(([book, verses]) => {
-studyList.innerHTML += `
-            <h3 class="study-book">📖 ${book}</h3>
-        `;
 
-        verses.sort((a,b)=>{
+        items.sort((a,b)=>{
 
             if(a.chapter !== b.chapter){
+
                 return a.chapter - b.chapter;
+
             }
 
             return a.verse - b.verse;
 
         });
 
-        verses.forEach(item => {
 
-            studyList.innerHTML += `
-                <div
-                    class="study-item"
-                    onclick="openSavedVerse('${item.id}')"
-                >
+
+        highlightList.innerHTML += `
+
+            <h3 class="study-book">
+                📖 ${book}
+            </h3>
+
+        `;
+
+
+        noteList.innerHTML += `
+
+            <h3 class="study-book">
+                📖 ${book}
+            </h3>
+
+        `;
+
+
+
+        items.forEach(item=>{
+
+
+            if(item.type==="highlight"){
+
+
+                highlightList.innerHTML += `
+
+                <div 
+                class="study-item"
+                onclick="openSavedVerse('${item.id}')">
+
                     🖍 ${formatReference(item.id)}
+
                 </div>
-            `;
+
+                `;
+
+
+            }
+
+
+
+            if(item.type==="note"){
+
+
+                noteList.innerHTML += `
+
+                <div 
+                class="study-item"
+                onclick="openSavedVerse('${item.id}')">
+
+                    <div class="study-reference">
+
+                    ${formatReference(item.id)}
+
+                    </div>
+
+
+                    <p>${item.note}</p>
+
+                </div>
+
+                `;
+
+
+            }
+
 
         });
 
-    });
-
-    // Notes
-const groupedNotes = {};
-
-Object.entries(notes).forEach(([id, note]) => {
-
-    const parts = id.split("_");
-
-    const book = parts[0];
-    const chapter = Number(parts[1]);
-    const verse = Number(parts[2]);
-
-    if(!groupedNotes[book]){
-        groupedNotes[book] = [];
-    }
-
-    groupedNotes[book].push({
-        id,
-        note,
-        chapter,
-        verse
-    });
-
-});
-
-
-Object.entries(groupedNotes)
-.sort(([a],[b]) =>
-
-    bookOrder.indexOf(a) - bookOrder.indexOf(b)
-
-)
-.forEach(([book, verses]) => {
-
-    noteList.innerHTML += `
-        <h3 class="study-book">📖 ${book}</h3>
-    `;
-
-    verses.sort((a,b) => {
-
-        if(a.chapter !== b.chapter){
-            return a.chapter - b.chapter;
-        }
-
-        return a.verse - b.verse;
 
     });
 
-    verses.forEach(item => {
-
-        noteList.innerHTML += `
-            <div class="study-item">
-
-                <div class="study-reference">
-                    ${formatReference(item.id)}
-                </div>
-
-                ${item.note}
-
-            </div>
-        `;
-
-    });
-
-});
 
 }
 loadBible();
