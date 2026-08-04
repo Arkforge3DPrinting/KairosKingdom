@@ -654,8 +654,6 @@ function loadStudyData(){
 
     });
 
-
-}
 loadBible();
 
 document
