@@ -400,6 +400,10 @@ function saveNote(){
 
     document.getElementById("noteBox").style.display = "none";
 
+
+    // Refresh study page if it is open
+    loadStudyData();
+
 }
 function formatReference(id){
 
