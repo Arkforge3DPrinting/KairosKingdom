@@ -64,3 +64,38 @@ main{
     background:#334155;
 
 }
+#reader{
+
+    margin-top:40px;
+
+    padding:30px;
+
+    background:#111827;
+
+    border-radius:16px;
+
+}
+
+
+.chapter{
+
+    display:inline-block;
+
+    background:#1e293b;
+
+    padding:12px 18px;
+
+    margin:6px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+
+.chapter:hover{
+
+    background:#334155;
+
+}
