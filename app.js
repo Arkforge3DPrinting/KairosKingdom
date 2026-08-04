@@ -367,6 +367,13 @@ function saveNote(){
     document.getElementById("noteBox").style.display = "none";
 
 }
+function formatReference(id){
+
+    const parts = id.split("_");
+
+    return `${parts[0]} ${parts[1]}:${parts[2]}`;
+
+}
 
 function openStudy(){
 
@@ -374,6 +381,11 @@ function openStudy(){
 
     document.getElementById("studyPanel").style.display="block";
 
+function formatReference(id){
+
+    const parts = id.split("_");
+
+    return `${parts[0]} ${parts[1]}:${parts[2]}`;
 
     loadStudyData();
 
@@ -487,19 +499,25 @@ function loadStudyData(){
     highlightList.innerHTML = "";
 
 
-    highlights.forEach(id => {
+   highlights.forEach(id => {
 
-        highlightList.innerHTML += `
+    const parts = id.split("_");
 
-        <div class="study-item">
+    const reference = 
+        `${parts[0]} ${parts[1]}:${parts[2]}`;
 
-            🖍 ${id}
 
-        </div>
+    highlightList.innerHTML += `
 
-        `;
+    <div class="study-item">
 
-    });
+        🖍 ${reference}
+
+    </div>
+
+    `;
+
+});
 
 
 
@@ -514,9 +532,9 @@ function loadStudyData(){
 
             <div class="study-reference">
 
-                ${id}
+    ${formatReference(id)}
 
-            </div>
+</div>
 
             ${note}
 
