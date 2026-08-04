@@ -7,9 +7,9 @@
 /* ---------- GLOBAL ---------- */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 
@@ -57,7 +57,6 @@ header {
 
 
     background:
-
         rgba(255,250,240,.72);
 
 
@@ -65,12 +64,10 @@ header {
 
 
     border-bottom:
-
         1px solid rgba(120,90,40,.2);
 
 
     box-shadow:
-
         0 10px 30px rgba(0,0,0,.08);
 
 }
@@ -122,25 +119,17 @@ header p {
 
     width:min(500px,80%);
 
-
     padding:15px 18px;
-
 
     border-radius:14px;
 
-
     border:
-
         1px solid rgba(120,90,40,.25);
 
-
     background:
-
         rgba(255,255,255,.7);
 
-
     font-size:1rem;
-
 
     outline:none;
 
@@ -157,7 +146,6 @@ header p {
 
 
 .search-box button,
-#studyButton,
 #backBibleButton {
 
 
@@ -220,22 +208,15 @@ header p {
 
 .layout {
 
-
     display:grid;
 
-
     grid-template-columns:
-
         300px 1fr;
 
-
     min-height:
-
         calc(100vh - 150px);
 
-
     gap:20px;
-
 
     padding:25px;
 
@@ -257,7 +238,9 @@ header p {
     backdrop-filter:blur(15px);
 
 
-    border-radius:22px;
+    border-radius:
+
+        0 22px 22px 22px;
 
 
     padding:25px;
@@ -283,6 +266,95 @@ header p {
 
 
 
+/* =========================
+   MY STUDY FOLDER TAB
+========================= */
+
+
+.folder-tab {
+
+
+    display:inline-block;
+
+
+    background:#b8872d;
+
+
+    color:white;
+
+
+    padding:12px 28px;
+
+
+    border-radius:
+
+        14px 14px 0 0;
+
+
+    font-weight:700;
+
+
+    font-size:.9rem;
+
+
+    cursor:pointer;
+
+
+    width:max-content;
+
+
+    margin-top:-25px;
+
+
+    margin-left:-25px;
+
+
+    margin-bottom:20px;
+
+
+    position:relative;
+
+
+    box-shadow:
+
+        0 -4px 12px rgba(0,0,0,.15);
+
+
+}
+
+
+
+.folder-tab::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    bottom:-8px;
+
+
+    left:0;
+
+
+    width:100%;
+
+
+    height:8px;
+
+
+    background:#e7c98b;
+
+
+}
+
+
+
+/* ---------- BOOK LIST ---------- */
+
+
 #bookGrid {
 
 
@@ -293,7 +365,6 @@ header p {
     gap:12px;
 
 }
-
 
 
 
@@ -348,18 +419,24 @@ header p {
 /* ---------- READER ---------- */
 
 
-.reader{
+.reader {
+
 
     padding:35px;
 
+
     background:
+
         rgba(255,250,240,.75);
 
+
     border-radius:25px;
+
 
     margin:25px;
 
 }
+
 
 
 #bookTitle {
@@ -382,34 +459,25 @@ header p {
 
 .chapter {
 
-
     display:inline-block;
-
 
     margin:5px;
 
-
     padding:12px 18px;
 
-
     border-radius:14px;
-
 
     background:
 
         rgba(184,134,59,.15);
 
-
     border:
 
         1px solid rgba(184,134,59,.3);
 
-
     color:#5b3a1e;
 
-
     cursor:pointer;
-
 
     transition:.25s;
 
@@ -419,12 +487,9 @@ header p {
 
 .chapter:hover {
 
-
     background:#b8863b;
 
-
     color:white;
-
 
     transform:translateY(-3px);
 
@@ -437,9 +502,7 @@ header p {
 
 #verseContent {
 
-
     margin-top:35px;
-
 
     max-width:900px;
 
@@ -448,7 +511,6 @@ header p {
 
 
 .chapter-title {
-
 
     font-size:2rem;
 
@@ -462,24 +524,17 @@ header p {
 
 .verse {
 
-
     font-size:1.15rem;
-
 
     line-height:2;
 
-
     padding:12px 15px;
-
 
     margin-bottom:12px;
 
-
     border-radius:12px;
 
-
     transition:.25s;
-
 
     cursor:pointer;
 
@@ -489,25 +544,9 @@ header p {
 
 .verse:hover {
 
-
     background:
 
         rgba(184,134,59,.12);
-
-}
-
-
-
-.verse-number {
-
-
-    color:#a47732;
-
-
-    font-weight:bold;
-
-
-    margin-right:12px;
 
 }
 
@@ -517,7 +556,6 @@ header p {
 
 
 .highlight {
-
 
     background:
 
@@ -541,27 +579,21 @@ header p {
 
 .search-result {
 
-
     background:
 
         rgba(255,255,255,.65);
 
-
     padding:18px;
-
 
     border-radius:16px;
 
-
     margin-bottom:15px;
-
 
 }
 
 
 
 .search-reference {
-
 
     font-weight:bold;
 
@@ -588,44 +620,48 @@ header p {
 
     transform:translateX(-50%);
 
-    background:rgba(255,250,240,0.95);
+
+    background:
+
+        rgba(255,250,240,.95);
+
 
     backdrop-filter:blur(15px);
 
+
     padding:15px 20px;
+
 
     border-radius:20px;
 
+
     gap:12px;
 
+
     box-shadow:
+
         0 20px 40px rgba(0,0,0,.25);
+
 
     z-index:99999;
 
 }
 
 
-.verse-menu button {
 
+.verse-menu button {
 
     border:none;
 
-
     border-radius:12px;
-
 
     padding:12px 18px;
 
-
     cursor:pointer;
-
 
     background:#8c641d;
 
-
     color:white;
-
 
 }
 
@@ -636,21 +672,15 @@ header p {
 
 .note-box {
 
-
     display:none;
-
 
     position:fixed;
 
-
     top:50%;
-
 
     left:50%;
 
-
     transform:
-
         translate(-50%,-50%);
 
 
@@ -658,7 +688,6 @@ header p {
 
 
     background:
-
         rgba(255,250,240,.95);
 
 
@@ -669,59 +698,7 @@ header p {
 
 
     box-shadow:
-
         0 25px 60px rgba(0,0,0,.3);
-
-}
-
-
-
-.note-box textarea {
-
-
-    width:100%;
-
-
-    height:160px;
-
-
-    padding:15px;
-
-
-    border-radius:14px;
-
-
-    border:1px solid #d6c3a5;
-
-
-    font-size:1rem;
-
-}
-
-
-
-.note-box button {
-
-
-    margin-top:15px;
-
-
-    padding:12px 20px;
-
-
-    border:none;
-
-
-    border-radius:12px;
-
-
-    background:#8c641d;
-
-
-    color:white;
-
-
-    cursor:pointer;
 
 }
 
@@ -732,64 +709,35 @@ header p {
 
 #studyPanel {
 
-
     display:none;
-
 
     max-width:900px;
 
-
     margin:30px auto;
-
 
     padding:30px;
 
 }
 
 
-
 .study-item {
 
-
     background:
-
         rgba(255,250,240,.85);
-
 
     padding:18px;
 
-
     border-radius:16px;
-
 
     margin-bottom:15px;
 
-
     cursor:pointer;
-
-
-    box-shadow:
-
-        0 8px 20px rgba(0,0,0,.08);
-
-
-    transition:.2s;
-
-}
-
-
-
-.study-item:hover {
-
-
-    transform:translateY(-3px);
 
 }
 
 
 
 .study-reference {
-
 
     color:#8c641d;
 
@@ -799,67 +747,7 @@ header p {
 
 }
 
-.reader {
 
-    position:relative;
-    margin-top:40px;
-    padding:35px;
-
-}
-
-/* =========================
-   MY STUDY FOLDER TAB
-========================= */
-
-.folder-tab {
-
-    display:inline-block;
-
-    background:#b8872d;
-
-    color:white;
-
-    padding:12px 28px;
-
-    border-radius:14px 14px 0 0;
-
-    font-weight:700;
-
-    font-size:.9rem;
-
-    cursor:pointer;
-
-    box-shadow:
-        0 -3px 10px rgba(0,0,0,.12);
-
-    margin-left:25px;
-
-    margin-bottom:-1px;
-
-}
-
-
-/* little paper edge */
-
-.folder-tab::after {
-
-    content:"";
-
-    position:absolute;
-
-    bottom:-10px;
-
-    left:0;
-   
-    width:max-content;
-
-    width:100%;
-
-    height:10px;
-
-    background:#e7c98b;
-
-}
 
 /* ---------- MOBILE ---------- */
 
@@ -874,4 +762,4 @@ header p {
     }
 
 
-
+}
