@@ -982,3 +982,85 @@ header p {
     color:#5b3a1e;
 
 }
+.study-book-card {
+
+    background:
+        rgba(255,250,240,.85);
+
+    border-radius:20px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+.study-book-card h3 {
+
+    color:#5b3a1e;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.study-item {
+
+    background:
+        rgba(255,255,255,.65);
+
+    padding:15px;
+
+    border-radius:14px;
+
+    margin-bottom:10px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+.study-item:hover {
+
+    transform:translateX(5px);
+
+    background:
+        rgba(255,255,255,.95);
+
+}
+
+
+
+.study-reference {
+
+    color:#8c641d;
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.study-note {
+
+    margin-top:10px;
+
+    padding:10px;
+
+    background:
+        rgba(184,134,59,.12);
+
+    border-radius:10px;
+
+    font-style:italic;
+
+}
