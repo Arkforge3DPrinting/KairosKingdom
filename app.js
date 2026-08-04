@@ -1,14 +1,17 @@
+let bibleVerses = [];
+
+
 async function loadBible(){
 
     const response = await fetch("bible.json");
 
     const bible = await response.json();
 
-    const verses = bible.verses;
+    bibleVerses = bible.verses;
 
 
     const books = [...new Set(
-        verses.map(v => v.book_name)
+        bibleVerses.map(v => v.book_name)
     )];
 
 
@@ -27,7 +30,7 @@ async function loadBible(){
 
         card.onclick = () => {
 
-            openBook(book, verses);
+            openBook(book);
 
         };
 
@@ -41,7 +44,7 @@ async function loadBible(){
 
 
 
-function openBook(book, verses){
+function openBook(book){
 
 
     document.getElementById("bookTitle").textContent = book;
@@ -49,7 +52,7 @@ function openBook(book, verses){
 
     const chapters = [...new Set(
 
-        verses
+        bibleVerses
 
         .filter(v => v.book_name === book)
 
@@ -70,10 +73,69 @@ function openBook(book, verses){
 
         button.className = "chapter";
 
-        button.textContent = "Chapter " + chapter;
+        button.textContent = chapter;
+
+
+        button.onclick = () => {
+
+            openChapter(book, chapter);
+
+        };
 
 
         chapterList.appendChild(button);
+
+
+    });
+
+
+}
+
+
+
+function openChapter(book, chapter){
+
+
+    const verses = bibleVerses.filter(v =>
+
+        v.book_name === book &&
+        v.chapter === chapter
+
+    );
+
+
+    const verseContent = document.getElementById("verseContent");
+
+
+    verseContent.innerHTML = `
+
+        <h3 class="chapter-title">
+
+        ${book} ${chapter}
+
+        </h3>
+
+    `;
+
+
+    verses.forEach(v => {
+
+
+        verseContent.innerHTML += `
+
+        <div class="verse">
+
+            <span class="verse-number">
+
+            ${v.verse}
+
+            </span>
+
+            ${v.text}
+
+        </div>
+
+        `;
 
 
     });
