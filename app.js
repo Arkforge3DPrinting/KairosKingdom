@@ -498,10 +498,9 @@ function loadStudyData(){
 
 
     highlightList.innerHTML = "";
+
     noteList.innerHTML = "";
 
-
-    // HIGHLIGHTS
 
     highlights.forEach(id => {
 
@@ -521,8 +520,6 @@ function loadStudyData(){
 
 
 
-    // NOTES
-
     Object.entries(notes).forEach(([id,note]) => {
 
 
@@ -535,14 +532,12 @@ function loadStudyData(){
 
             <div class="study-reference">
 
-                ${formatReference(id)}
+            ${formatReference(id)}
 
             </div>
 
 
-            <p>
-                ${note}
-            </p>
+            <p>${note}</p>
 
 
         </div>
@@ -552,21 +547,25 @@ function loadStudyData(){
 
     });
 
-
 }
 
+
 loadBible();
+
 
 document
 .getElementById("searchButton")
 .onclick = searchBible;
 
+
 document
 .getElementById("studyButton")
 .onclick = openStudy;
 
+
 const backButton =
-    document.getElementById("backBibleButton");
+document.getElementById("backBibleButton");
+
 
 if(backButton){
 
