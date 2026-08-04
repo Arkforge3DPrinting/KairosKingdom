@@ -4,8 +4,28 @@ async function loadBible(){
 
     const bible = await response.json();
 
-    console.log("FIRST VERSE:");
-    console.log(bible.verses[0]);
+    const verses = bible.verses;
+
+    const books = [...new Set(
+        verses.map(verse => verse.book_name)
+    )];
+
+    console.log("Books found:");
+    console.log(books);
+
+    const bookGrid = document.getElementById("bookGrid");
+
+    books.forEach(book => {
+
+        const card = document.createElement("div");
+
+        card.className = "book";
+
+        card.textContent = book;
+
+        bookGrid.appendChild(card);
+
+    });
 
 }
 
