@@ -408,7 +408,13 @@ function openStudy(){
     document.querySelector(".layout").style.display = "none";
 
     document.getElementById("studyPanel").style.display = "block";
+function getBookFromId(id){
 
+    const parts = id.split("_");
+
+    return parts[0];
+
+}
 
     loadStudyData();
 
@@ -471,20 +477,51 @@ function loadStudyData(){
     highlightList.innerHTML = "";
 
 
+const groupedHighlights = {};
+
+
 highlights.forEach(id => {
+
+    const book = getBookFromId(id);
+
+    if(!groupedHighlights[book]){
+        groupedHighlights[book] = [];
+    }
+
+    groupedHighlights[book].push(id);
+
+});
+
+
+Object.entries(groupedHighlights).forEach(([book, verses]) => {
+
 
     highlightList.innerHTML += `
 
-    <div 
-        class="study-item"
-        onclick="openSavedVerse('${id}')"
-    >
-
-        🖍 ${formatReference(id)}
-
-    </div>
+        <h3 class="study-book">
+            📖 ${book}
+        </h3>
 
     `;
+
+
+    verses.forEach(id => {
+
+        highlightList.innerHTML += `
+
+        <div 
+            class="study-item"
+            onclick="openSavedVerse('${id}')"
+        >
+
+            🖍 ${formatReference(id)}
+
+        </div>
+
+        `;
+
+    });
+
 
 });
 
