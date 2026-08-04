@@ -458,3 +458,8 @@ loadBible();
 document
 .getElementById("searchButton")
 .onclick = searchBible;
+
+
+document
+.getElementById("studyButton")
+.onclick = openStudy;
