@@ -352,3 +352,50 @@ header p{
     padding:10px;
 
 }
+.verse-menu{
+
+    display:none;
+
+    position:fixed;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#1e293b;
+
+    padding:15px;
+
+    border-radius:16px;
+
+    gap:10px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+
+}
+
+
+.verse-menu button{
+
+    background:#334155;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 15px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+
+.verse-menu button:hover{
+
+    background:#475569;
+
+}
