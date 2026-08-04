@@ -49,6 +49,8 @@ body {
 
 header {
 
+    position:relative;
+
     text-align:center;
 
     padding:45px 20px;
