@@ -1,4 +1,5 @@
 let bibleVerses = [];
+let selectedVerse = null;
 
 
 async function loadBible(){
@@ -20,7 +21,6 @@ async function loadBible(){
 
     books.forEach(book => {
 
-
         const card = document.createElement("div");
 
         card.className = "book";
@@ -37,9 +37,7 @@ async function loadBible(){
 
         bookGrid.appendChild(card);
 
-
     });
-
 
 }
 
@@ -49,8 +47,7 @@ function openBook(book){
 
     document.getElementById("bookTitle").textContent = book;
 
-
-    document.getElementById("verseContent").innerHTML = 
+    document.getElementById("verseContent").innerHTML =
         "Select a chapter to begin.";
 
 
@@ -65,12 +62,9 @@ function openBook(book){
     )];
 
 
-const chapterList = document.getElementById("chapterList");
+    const chapterList = document.getElementById("chapterList");
 
-chapterList.innerHTML = "";
-
-document.getElementById("verseContent").innerHTML =
-    "Select a chapter to begin.";
+    chapterList.innerHTML = "";
 
 
     chapters.forEach(chapter => {
@@ -95,7 +89,6 @@ document.getElementById("verseContent").innerHTML =
 
     });
 
-
 }
 
 
@@ -113,7 +106,6 @@ function openChapter(book, chapter){
 
     const verseContent = document.getElementById("verseContent");
 
-    verseContent.scrollTop = 0;
 
     verseContent.innerHTML = `
 
@@ -126,47 +118,44 @@ function openChapter(book, chapter){
     `;
 
 
+    const highlights = JSON.parse(
+        localStorage.getItem("arkstudy_highlights") || "[]"
+    );
+
+
     verses.forEach(v => {
 
 
-     const savedHighlights = JSON.parse(
-    localStorage.getItem("arkstudy_highlights") || "[]"
-);
+        const verseID = `${book}_${chapter}_${v.verse}`;
 
 
-const verseText = `${v.verse} ${v.text}`;
+        const isHighlighted = highlights.includes(verseID);
 
 
-const isHighlighted = savedHighlights.includes(verseText);
+        verseContent.innerHTML += `
 
+        <div class="verse ${isHighlighted ? "highlight" : ""}"
+        data-id="${verseID}"
+        onclick="showVerseMenu(this)">
 
-verseContent.innerHTML += `
+            <span class="verse-number">
+            ${v.verse}
+            </span>
 
-<div class="verse ${isHighlighted ? "highlight" : ""}"
-onclick="showVerseMenu(this)">
+            ${v.text}
 
-    <span class="verse-number">
+        </div>
 
-    ${v.verse}
-
-    </span>
-
-    ${v.text}
-
-</div>
-
-`;
+        `;
 
 
     });
-
 
 }
 
 
 
 function searchBible(){
-
 
     const query = document
 
@@ -180,19 +169,13 @@ function searchBible(){
 
 
     if(!query){
-
         return;
-
     }
 
 
     const results = bibleVerses.filter(v =>
 
-        v.text
-
-        .toLowerCase()
-
-        .includes(query)
+        v.text.toLowerCase().includes(query)
 
     );
 
@@ -237,12 +220,31 @@ function searchBible(){
 
     });
 
+}
+
+
+
+function showVerseMenu(element){
+
+    selectedVerse = element;
+
+
+    document
+    .getElementById("verseMenu")
+    .style.display = "flex";
 
 }
 
-function highlightVerse(element){
 
-    element.classList.toggle("highlight");
+
+function toggleHighlight(){
+
+    if(!selectedVerse){
+        return;
+    }
+
+
+    selectedVerse.classList.toggle("highlight");
 
 
     const highlights = JSON.parse(
@@ -250,24 +252,23 @@ function highlightVerse(element){
     );
 
 
-    const text = element.innerText;
+    const id = selectedVerse.dataset.id;
 
 
-    if(element.classList.contains("highlight")){
+    if(selectedVerse.classList.contains("highlight")){
 
 
-        if(!highlights.includes(text)){
+        if(!highlights.includes(id)){
 
-            highlights.push(text);
+            highlights.push(id);
 
         }
 
 
-    }
-    else{
+    } else {
 
 
-        const index = highlights.indexOf(text);
+        const index = highlights.indexOf(id);
 
 
         if(index > -1){
@@ -284,35 +285,6 @@ function highlightVerse(element){
         JSON.stringify(highlights)
     );
 
-}
-let selectedVerse = null;
-
-
-function showVerseMenu(element){
-
-    selectedVerse = element;
-
-
-    const menu = document.getElementById("verseMenu");
-
-    menu.style.display = "flex";
-
-}
-
-
-
-function toggleHighlight(){
-
-    if(!selectedVerse){
-        return;
-    }
-
-
-    selectedVerse.classList.toggle("highlight");
-
-
-    saveHighlight(selectedVerse.innerText);
-
 
     hideVerseMenu();
 
@@ -322,7 +294,9 @@ function toggleHighlight(){
 
 function hideVerseMenu(){
 
-    document.getElementById("verseMenu").style.display = "none";
+    document
+    .getElementById("verseMenu")
+    .style.display = "none";
 
 }
 
@@ -343,6 +317,9 @@ function copyVerse(){
     hideVerseMenu();
 
 }
+
+
+
 function openNoteBox(){
 
     if(!selectedVerse){
@@ -350,21 +327,16 @@ function openNoteBox(){
     }
 
 
-    const noteBox = document.getElementById("noteBox");
-
-    const input = document.getElementById("noteInput");
-
-
     const notes = JSON.parse(
         localStorage.getItem("arkstudy_notes") || "{}"
     );
 
 
-    input.value = notes[selectedVerse.innerText] || "";
+    document.getElementById("noteInput").value =
+        notes[selectedVerse.dataset.id] || "";
 
 
-    noteBox.style.display = "block";
-
+    document.getElementById("noteBox").style.display = "block";
 
 }
 
@@ -377,15 +349,13 @@ function saveNote(){
     }
 
 
-    const input = document.getElementById("noteInput");
-
-
     const notes = JSON.parse(
         localStorage.getItem("arkstudy_notes") || "{}"
     );
 
 
-    notes[selectedVerse.innerText] = input.value;
+    notes[selectedVerse.dataset.id] =
+        document.getElementById("noteInput").value;
 
 
     localStorage.setItem(
@@ -394,15 +364,15 @@ function saveNote(){
     );
 
 
-    document.getElementById("noteBox").style.display="none";
+    document.getElementById("noteBox").style.display = "none";
 
 }
+
+
+
 loadBible();
 
 
-
 document
-
-    .getElementById("searchButton")
-
-    .onclick = searchBible;
+.getElementById("searchButton")
+.onclick = searchBible;
