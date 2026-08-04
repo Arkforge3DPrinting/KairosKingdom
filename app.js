@@ -480,11 +480,12 @@ setTimeout(()=>{
 
 function loadStudyData(){
 
-    const highlightList =
-        document.getElementById("highlightList");
+    const studyList = document.getElementById("studyList");
 
-    const noteList =
-        document.getElementById("noteList");
+    if(!studyList){
+        console.log("studyList missing");
+        return;
+    }
 
 
     const highlights = JSON.parse(
@@ -497,55 +498,122 @@ function loadStudyData(){
     );
 
 
-    highlightList.innerHTML = "";
-
-    noteList.innerHTML = "";
+    studyList.innerHTML = "";
 
 
-    highlights.forEach(id => {
+    const grouped = {};
 
-        highlightList.innerHTML += `
 
-        <div 
-        class="study-item"
-        onclick="openSavedVerse('${id}')">
 
-            🖍 ${formatReference(id)}
+    // Combine highlights + notes together
+    const allVerses = new Set([
+        ...highlights,
+        ...Object.keys(notes)
+    ]);
 
-        </div>
 
-        `;
+
+    allVerses.forEach(id => {
+
+        const parts = id.split("_");
+
+        const book = parts[0];
+        const chapter = Number(parts[1]);
+        const verse = Number(parts[2]);
+
+
+        if(!grouped[book]){
+
+            grouped[book] = [];
+
+        }
+
+
+        grouped[book].push({
+
+            id,
+            chapter,
+            verse,
+            highlighted: highlights.includes(id),
+            note: notes[id] || null
+
+        });
+
 
     });
 
 
 
-    Object.entries(notes).forEach(([id,note]) => {
+    // Sort books alphabetically
+    Object.keys(grouped)
+    .sort((a,b)=>a.localeCompare(b))
+    .forEach(book => {
 
 
-        noteList.innerHTML += `
+        studyList.innerHTML += `
 
-        <div 
-        class="study-item"
-        onclick="openSavedVerse('${id}')">
+        <div class="study-book-card">
+
+            <h3>
+                📖 ${book}
+            </h3>
 
 
-            <div class="study-reference">
+        </div>
 
-            ${formatReference(id)}
+        `;
+
+
+        const bookCard = studyList.lastElementChild;
+
+
+
+        // Sort verses by chapter then verse
+        grouped[book]
+        .sort((a,b)=>{
+
+            if(a.chapter !== b.chapter){
+
+                return a.chapter - b.chapter;
+
+            }
+
+            return a.verse - b.verse;
+
+        })
+        .forEach(item => {
+
+
+            bookCard.innerHTML += `
+
+            <div 
+                class="study-item"
+                onclick="openSavedVerse('${item.id}')"
+            >
+
+                <div class="study-reference">
+
+                    ${formatReference(item.id)}
+
+                </div>
+
+
+                ${item.highlighted ? "🖍 Highlighted" : ""}
+
+                ${item.note ? "📝 Note saved" : ""}
+
 
             </div>
 
+            `;
 
-            <p>${note}</p>
 
+        });
 
-        </div>
-
-        `;
 
 
     });
+
 
 }
 
@@ -563,9 +631,7 @@ document
 .onclick = openStudy;
 
 
-const backButton =
-document.getElementById("backBibleButton");
-
+const backButton = document.getElementById("backBibleButton");
 
 if(backButton){
 
