@@ -807,3 +807,100 @@ header p {
 
 
 }
+/* =========================
+   STUDY ORGANISER
+========================= */
+
+
+.study-book {
+
+    color:#5b3a1e;
+
+    margin:
+
+    25px 0 12px;
+
+    font-size:1.3rem;
+
+    border-bottom:
+
+    1px solid rgba(184,134,59,.25);
+
+    padding-bottom:8px;
+
+}
+
+
+
+.study-item {
+
+
+    background:
+
+    rgba(255,250,240,.75);
+
+
+    border-radius:16px;
+
+
+    padding:16px;
+
+
+    margin-bottom:12px;
+
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,.08);
+
+
+    cursor:pointer;
+
+
+    transition:.25s;
+
+
+}
+
+
+
+.study-item:hover {
+
+
+    transform:
+
+    translateX(6px);
+
+
+    background:
+
+    rgba(255,255,255,.95);
+
+
+}
+
+
+
+.study-reference {
+
+
+    color:#8c641d;
+
+
+    font-weight:700;
+
+
+    margin-bottom:8px;
+
+
+}
+
+
+
+.study-item p {
+
+    line-height:1.6;
+
+    color:#4b3825;
+
+}
