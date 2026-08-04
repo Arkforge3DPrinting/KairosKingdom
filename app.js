@@ -535,7 +535,9 @@ function loadStudyData(){
             chapter,
             verse,
             highlighted: highlights.includes(id),
-            note: notes[id] || null
+            note: notes[id] && notes[id].trim() !== "" 
+    ? notes[id] 
+    : null
 
         });
 
