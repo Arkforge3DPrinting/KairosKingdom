@@ -285,7 +285,64 @@ function highlightVerse(element){
     );
 
 }
+let selectedVerse = null;
 
+
+function showVerseMenu(element){
+
+    selectedVerse = element;
+
+
+    const menu = document.getElementById("verseMenu");
+
+    menu.style.display = "flex";
+
+}
+
+
+
+function toggleHighlight(){
+
+    if(!selectedVerse){
+        return;
+    }
+
+
+    selectedVerse.classList.toggle("highlight");
+
+
+    saveHighlight(selectedVerse.innerText);
+
+
+    hideVerseMenu();
+
+}
+
+
+
+function hideVerseMenu(){
+
+    document.getElementById("verseMenu").style.display = "none";
+
+}
+
+
+
+function copyVerse(){
+
+    if(!selectedVerse){
+        return;
+    }
+
+
+    navigator.clipboard.writeText(
+        selectedVerse.innerText
+    );
+
+
+    hideVerseMenu();
+
+}
 loadBible();
 
 
