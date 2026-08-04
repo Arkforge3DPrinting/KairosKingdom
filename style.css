@@ -1,28 +1,66 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    background: #0f172a;
-    color: white;
-    font-family: system-ui, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+body{
+    background:#0f172a;
+    color:white;
+    font-family:system-ui,sans-serif;
 }
 
-.app {
-    text-align: center;
+header{
+    text-align:center;
+    padding:40px 20px;
 }
 
-h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
 }
 
-#status {
-    color: #94a3b8;
+header p{
+    color:#94a3b8;
+}
+
+main{
+    width:min(1200px,95%);
+    margin:auto;
+    padding-bottom:50px;
+}
+
+#bookGrid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fill,minmax(170px,1fr));
+
+    gap:15px;
+
+}
+
+.book{
+
+    background:#1e293b;
+
+    border-radius:14px;
+
+    padding:20px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    text-align:center;
+
+}
+
+.book:hover{
+
+    transform:translateY(-5px);
+
+    background:#334155;
+
 }
