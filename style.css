@@ -99,3 +99,32 @@ main{
     background:#334155;
 
 }
+.verse{
+
+    margin-bottom:15px;
+
+    line-height:1.8;
+
+    color:#e2e8f0;
+
+}
+
+
+.verse-number{
+
+    color:#94a3b8;
+
+    font-weight:bold;
+
+    margin-right:8px;
+
+}
+
+
+.chapter-title{
+
+    margin-bottom:25px;
+
+    font-size:1.8rem;
+
+}
