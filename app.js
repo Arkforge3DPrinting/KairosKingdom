@@ -226,12 +226,17 @@ function searchBible(){
 
 function showVerseMenu(element){
 
+    console.log("SHOW MENU RUNNING");
+
     selectedVerse = element;
 
+    const menu = document.getElementById("verseMenu");
 
-    document
-    .getElementById("verseMenu")
-    .style.display = "flex";
+    console.log("Menu found:", menu);
+
+    menu.style.display = "flex";
+
+    console.log("Menu display:", menu.style.display);
 
 }
 
