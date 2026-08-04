@@ -1,6 +1,10 @@
-/* =========================
-   GLOBAL
-========================= */
+/* =====================================
+   ARKSTUDY UI REVAMP v1
+   Premium Bible Study Theme
+===================================== */
+
+
+/* ---------- GLOBAL ---------- */
 
 * {
     margin: 0;
@@ -11,450 +15,733 @@
 
 body {
 
-    background: #0b1120;
-    color: #f8fafc;
+    min-height:100vh;
+
+    color:#2f2a24;
 
     font-family:
+        "Segoe UI",
         system-ui,
         -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
         sans-serif;
+
+
+    background:
+
+        linear-gradient(
+            rgba(245,235,215,.92),
+            rgba(230,215,185,.92)
+        ),
+
+        url("bible-bg.jpg");
+
+
+    background-size:cover;
+
+    background-attachment:fixed;
 
 }
 
 
 
-/* =========================
-   HEADER
-========================= */
+/* ---------- HEADER ---------- */
+
 
 header {
 
-    text-align: center;
-    padding: 35px;
+    text-align:center;
 
-    background: #111827;
-    border-bottom: 1px solid #1e293b;
+    padding:45px 20px;
+
+
+    background:
+
+        rgba(255,250,240,.72);
+
+
+    backdrop-filter:blur(12px);
+
+
+    border-bottom:
+
+        1px solid rgba(120,90,40,.2);
+
+
+    box-shadow:
+
+        0 10px 30px rgba(0,0,0,.08);
 
 }
+
 
 
 header h1 {
 
-    font-size: 2.8rem;
+    font-size:3rem;
+
+    letter-spacing:1px;
+
+    color:#5b3a1e;
 
 }
+
 
 
 header p {
 
-    color: #94a3b8;
-    margin-top: 8px;
+    margin-top:10px;
+
+    color:#80684d;
+
+    font-size:1.1rem;
 
 }
 
 
 
-/* =========================
-   SEARCH
-========================= */
+/* ---------- SEARCH ---------- */
+
 
 .search-box {
 
-    margin-top: 25px;
+    margin-top:25px;
 
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
 
 }
+
 
 
 .search-box input {
 
-    width: min(500px, 80%);
+    width:min(500px,80%);
 
-    padding: 14px;
 
-    border-radius: 10px;
-    border: none;
+    padding:15px 18px;
 
-    font-size: 1rem;
+
+    border-radius:14px;
+
+
+    border:
+
+        1px solid rgba(120,90,40,.25);
+
+
+    background:
+
+        rgba(255,255,255,.7);
+
+
+    font-size:1rem;
+
+
+    outline:none;
 
 }
+
+
+
+.search-box input:focus {
+
+    border-color:#b8863b;
+
+}
+
 
 
 .search-box button,
-#studyButton {
+#studyButton,
+#backBibleButton {
 
-    padding: 14px 20px;
 
-    border: none;
-    border-radius: 10px;
+    padding:14px 22px;
 
-    background: #1e293b;
-    color: white;
 
-    cursor: pointer;
+    border:none;
 
-    transition: .2s;
+
+    border-radius:14px;
+
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #b8863b,
+            #8c641d
+        );
+
+
+    color:white;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+        0 6px 15px rgba(140,100,29,.3);
+
+
+    transition:.25s;
 
 }
+
 
 
 .search-box button:hover,
-#studyButton:hover {
+#studyButton:hover,
+#backBibleButton:hover {
 
-    background: #334155;
+
+    transform:translateY(-3px);
+
+
+    box-shadow:
+
+        0 10px 25px rgba(140,100,29,.4);
 
 }
 
 
 
-/* =========================
-   MAIN LAYOUT
-========================= */
+/* ---------- MAIN LAYOUT ---------- */
+
 
 .layout {
 
-    display: grid;
 
-    grid-template-columns: 300px 1fr;
+    display:grid;
 
-    min-height: calc(100vh - 130px);
+
+    grid-template-columns:
+
+        300px 1fr;
+
+
+    min-height:
+
+        calc(100vh - 150px);
+
+
+    gap:20px;
+
+
+    padding:25px;
 
 }
 
 
 
-/* =========================
-   SIDEBAR / BOOKS
-========================= */
+/* ---------- SIDEBAR ---------- */
+
 
 .sidebar {
 
-    padding: 25px;
 
-    background: #111827;
+    background:
 
-    border-right: 1px solid #1e293b;
+        rgba(255,250,240,.75);
 
-    overflow-y: auto;
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:22px;
+
+
+    padding:25px;
+
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.1);
+
 
 }
+
 
 
 .sidebar h2 {
 
-    margin-bottom: 20px;
+
+    color:#5b3a1e;
+
+    margin-bottom:20px;
 
 }
+
 
 
 #bookGrid {
 
-    display: flex;
 
-    flex-direction: column;
+    display:flex;
 
-    gap: 10px;
+    flex-direction:column;
+
+    gap:12px;
 
 }
+
+
 
 
 .book {
 
-    background: #1e293b;
 
-    padding: 14px;
+    padding:16px;
 
-    border-radius: 12px;
 
-    cursor: pointer;
+    background:
 
-    transition: .2s;
+        rgba(255,255,255,.65);
+
+
+    border-radius:14px;
+
+
+    cursor:pointer;
+
+
+    color:#4b3825;
+
+
+    transition:.25s;
+
 
 }
+
 
 
 .book:hover {
 
-    background: #334155;
 
-    transform: translateX(5px);
+    transform:
+
+        translateX(8px);
+
+
+    background:
+
+        rgba(255,255,255,.95);
+
+
+    box-shadow:
+
+        0 8px 20px rgba(0,0,0,.1);
 
 }
 
 
 
-/* =========================
-   READER
-========================= */
+/* ---------- READER ---------- */
+
 
 .reader {
 
-    padding: 35px;
 
-    overflow-y: auto;
+    background:
+
+        rgba(255,250,240,.75);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:22px;
+
+
+    padding:35px;
+
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.1);
 
 }
+
 
 
 #bookTitle {
 
-    font-size: 2rem;
 
-    margin-bottom: 20px;
+    color:#5b3a1e;
+
+
+    font-size:2.2rem;
+
+
+    margin-bottom:25px;
 
 }
 
 
 
-/* =========================
-   CHAPTERS
-========================= */
+/* ---------- CHAPTER BUTTONS ---------- */
+
 
 .chapter {
 
-    display: inline-block;
 
-    background: #1e293b;
+    display:inline-block;
 
-    padding: 10px 16px;
 
-    border-radius: 10px;
+    margin:5px;
 
-    margin: 5px;
 
-    cursor: pointer;
+    padding:12px 18px;
 
-    transition: .2s;
+
+    border-radius:14px;
+
+
+    background:
+
+        rgba(184,134,59,.15);
+
+
+    border:
+
+        1px solid rgba(184,134,59,.3);
+
+
+    color:#5b3a1e;
+
+
+    cursor:pointer;
+
+
+    transition:.25s;
 
 }
+
 
 
 .chapter:hover {
 
-    background: #334155;
+
+    background:#b8863b;
+
+
+    color:white;
+
+
+    transform:translateY(-3px);
 
 }
 
 
 
-/* =========================
-   VERSES
-========================= */
+/* ---------- VERSES ---------- */
+
 
 #verseContent {
 
-    margin-top: 35px;
 
-    max-width: 850px;
+    margin-top:35px;
+
+
+    max-width:900px;
 
 }
+
 
 
 .chapter-title {
 
-    font-size: 1.8rem;
 
-    margin-bottom: 25px;
+    font-size:2rem;
+
+    color:#5b3a1e;
+
+    margin-bottom:25px;
 
 }
+
 
 
 .verse {
 
-    line-height: 1.9;
 
-    font-size: 1.1rem;
+    font-size:1.15rem;
 
-    margin-bottom: 12px;
 
-    padding: 8px;
+    line-height:2;
 
-    border-radius: 8px;
 
-    cursor: pointer;
+    padding:12px 15px;
 
-    transition: .2s;
+
+    margin-bottom:12px;
+
+
+    border-radius:12px;
+
+
+    transition:.25s;
+
+
+    cursor:pointer;
 
 }
+
 
 
 .verse:hover {
 
-    background: #1e293b;
+
+    background:
+
+        rgba(184,134,59,.12);
 
 }
+
 
 
 .verse-number {
 
-    color: #64748b;
 
-    font-weight: bold;
+    color:#a47732;
 
-    margin-right: 10px;
+
+    font-weight:bold;
+
+
+    margin-right:12px;
 
 }
+
+
+
+/* ---------- HIGHLIGHT ---------- */
 
 
 .highlight {
 
-    background: #854d0e;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(255,210,80,.45),
+            rgba(255,235,150,.6)
+        );
+
+
+    box-shadow:
+
+        inset 0 0 20px rgba(255,190,0,.2);
 
 }
 
 
 
-/* =========================
-   SEARCH RESULTS
-========================= */
+/* ---------- SEARCH RESULTS ---------- */
+
 
 .search-result {
 
-    padding: 15px;
 
-    margin-bottom: 15px;
+    background:
 
-    background: #1e293b;
+        rgba(255,255,255,.65);
 
-    border-radius: 12px;
+
+    padding:18px;
+
+
+    border-radius:16px;
+
+
+    margin-bottom:15px;
+
 
 }
+
 
 
 .search-reference {
 
-    color: #94a3b8;
 
-    font-weight: bold;
+    font-weight:bold;
 
-    margin-bottom: 8px;
+    color:#8c641d;
+
+    margin-bottom:8px;
 
 }
 
 
 
-/* =========================
-   VERSE MENU
-========================= */
+/* ---------- VERSE MENU ---------- */
+
 
 .verse-menu {
 
-    display: none;
 
-    position: fixed;
+    display:none;
 
-    bottom: 30px;
 
-    left: 50%;
+    position:fixed;
 
-    transform: translateX(-50%);
 
-    background: #1e293b;
+    bottom:30px;
 
-    padding: 15px;
 
-    border-radius: 16px;
+    left:50%;
 
-    gap: 10px;
+
+    transform:translateX(-50%);
+
+
+    background:
+
+        rgba(255,250,240,.95);
+
+
+    backdrop-filter:blur(15px);
+
+
+    padding:15px;
+
+
+    border-radius:20px;
+
+
+    gap:12px;
+
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,.4);
+
+        0 20px 40px rgba(0,0,0,.25);
 
 }
+
 
 
 .verse-menu button {
 
-    background: #334155;
 
-    color: white;
+    border:none;
 
-    border: none;
 
-    padding: 10px 15px;
+    border-radius:12px;
 
-    border-radius: 10px;
 
-    cursor: pointer;
+    padding:12px 18px;
+
+
+    cursor:pointer;
+
+
+    background:#8c641d;
+
+
+    color:white;
+
 
 }
 
 
-.verse-menu button:hover {
 
-    background: #475569;
+/* ---------- NOTES ---------- */
 
-}
-
-
-
-/* =========================
-   NOTES
-========================= */
 
 .note-box {
 
-    display: none;
 
-    position: fixed;
+    display:none;
 
-    top: 50%;
-    left: 50%;
+
+    position:fixed;
+
+
+    top:50%;
+
+
+    left:50%;
+
 
     transform:
-        translate(-50%, -50%);
 
-    background: #111827;
+        translate(-50%,-50%);
 
-    padding: 25px;
 
-    border-radius: 16px;
+    width:min(500px,90%);
 
-    width: min(500px,90%);
+
+    background:
+
+        rgba(255,250,240,.95);
+
+
+    padding:25px;
+
+
+    border-radius:20px;
+
 
     box-shadow:
-        0 20px 50px rgba(0,0,0,.5);
+
+        0 25px 60px rgba(0,0,0,.3);
 
 }
+
 
 
 .note-box textarea {
 
-    width: 100%;
 
-    height: 150px;
+    width:100%;
 
-    padding: 15px;
 
-    border-radius: 10px;
+    height:160px;
 
-    border: none;
 
-    resize: none;
+    padding:15px;
 
-    font-size: 1rem;
+
+    border-radius:14px;
+
+
+    border:1px solid #d6c3a5;
+
+
+    font-size:1rem;
 
 }
+
 
 
 .note-box button {
 
-    margin-top: 15px;
 
-    padding: 12px 20px;
+    margin-top:15px;
 
-    border: none;
 
-    border-radius: 10px;
+    padding:12px 20px;
 
-    background: #334155;
+
+    border:none;
+
+
+    border-radius:12px;
+
+
+    background:#8c641d;
+
 
     color:white;
+
 
     cursor:pointer;
 
@@ -462,48 +749,71 @@ header p {
 
 
 
-/* =========================
-   MY STUDY
-========================= */
+/* ---------- MY STUDY ---------- */
+
 
 #studyPanel {
 
+
     display:none;
 
-    padding:30px;
 
     max-width:900px;
 
+
     margin:30px auto;
 
+
+    padding:30px;
+
 }
+
 
 
 .study-item {
 
-    background:#1e293b;
 
-    padding:15px;
+    background:
 
-    border-radius:12px;
+        rgba(255,250,240,.85);
 
-    margin-bottom:12px;
+
+    padding:18px;
+
+
+    border-radius:16px;
+
+
+    margin-bottom:15px;
+
 
     cursor:pointer;
 
+
+    box-shadow:
+
+        0 8px 20px rgba(0,0,0,.08);
+
+
+    transition:.2s;
+
 }
+
 
 
 .study-item:hover {
 
-    background:#334155;
+
+    transform:translateY(-3px);
 
 }
 
 
+
 .study-reference {
 
-    color:#94a3b8;
+
+    color:#8c641d;
 
     font-weight:bold;
 
@@ -513,36 +823,8 @@ header p {
 
 
 
-#backBibleButton {
+/* ---------- MOBILE ---------- */
 
-    padding:12px 18px;
-
-    border:none;
-
-    border-radius:10px;
-
-    background:#1e293b;
-
-    color:white;
-
-    cursor:pointer;
-
-    margin-bottom:20px;
-
-}
-
-
-#backBibleButton:hover {
-
-    background:#334155;
-
-}
-
-
-
-/* =========================
-   MOBILE
-========================= */
 
 @media(max-width:800px){
 
@@ -554,10 +836,11 @@ header p {
     }
 
 
-    .sidebar {
+    .reader {
 
-        border-right:none;
+        padding:20px;
 
     }
+
 
 }
