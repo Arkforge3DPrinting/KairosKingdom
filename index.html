@@ -68,8 +68,29 @@
         🖍 Highlight
     </button>
 
+
+    <button onclick="openNoteBox()">
+        📝 Add Note
+    </button>
+
+
     <button onclick="copyVerse()">
         📋 Copy
+    </button>
+
+</div>
+
+
+<div id="noteBox" class="note-box">
+
+    <textarea 
+        id="noteInput"
+        placeholder="Write your study notes..."
+    ></textarea>
+
+
+    <button onclick="saveNote()">
+        Save Note
     </button>
 
 </div>
