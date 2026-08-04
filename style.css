@@ -963,3 +963,22 @@ header p {
     color:#4b3825;
 
 }
+.verse-note {
+
+    margin-top:12px;
+
+    padding:12px 15px;
+
+    background:
+        rgba(184,134,59,.12);
+
+    border-left:
+        4px solid #b8863b;
+
+    border-radius:10px;
+
+    font-size:.95rem;
+
+    color:#5b3a1e;
+
+}
