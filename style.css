@@ -828,9 +828,14 @@ header p {
 
     position:absolute;
 
-    top:-35px;
+    top:-25px;
 
     left:35px;
+
+
+    display:inline-flex;
+
+    width:auto;
 
 
     background:#e7c98b;
@@ -838,10 +843,10 @@ header p {
     color:#3b2f1d;
 
 
-    padding:12px 30px;
+    padding:10px 25px;
 
 
-    border-radius:18px 18px 0 0;
+    border-radius:14px 14px 0 0;
 
 
     font-weight:700;
@@ -851,22 +856,10 @@ header p {
 
 
     box-shadow:
-        0 -5px 15px rgba(0,0,0,.12);
+        0 -4px 12px rgba(0,0,0,.12);
 
 
-    transition:.2s;
-
-
-    z-index:5;
-
-}
-
-
-.folder-tab:hover {
-
-    transform:translateY(-5px);
-
-    background:#f1d9a7;
+    z-index:10;
 
 }
 
