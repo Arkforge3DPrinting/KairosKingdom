@@ -501,60 +501,59 @@ function loadStudyData(){
     noteList.innerHTML = "";
 
 
-    const grouped = {};
+    // HIGHLIGHTS
 
-
-
-    // Add highlights
     highlights.forEach(id => {
 
-        const parts = id.split("_");
+        highlightList.innerHTML += `
 
-        const book = parts[0];
-        const chapter = Number(parts[1]);
-        const verse = Number(parts[2]);
+        <div 
+        class="study-item"
+        onclick="openSavedVerse('${id}')">
 
+            🖍 ${formatReference(id)}
 
-        if(!grouped[book]){
-            grouped[book] = [];
-        }
+        </div>
 
-
-        grouped[book].push({
-            id:id,
-            type:"highlight",
-            chapter,
-            verse
-        });
+        `;
 
     });
 
 
 
-    // Add notes
+    // NOTES
+
     Object.entries(notes).forEach(([id,note]) => {
 
-        const parts = id.split("_");
 
-        const book = parts[0];
-        const chapter = Number(parts[1]);
-        const verse = Number(parts[2]);
+        noteList.innerHTML += `
 
-
-        if(!grouped[book]){
-            grouped[book] = [];
-        }
+        <div 
+        class="study-item"
+        onclick="openSavedVerse('${id}')">
 
 
-        grouped[book].push({
-            id:id,
-            type:"note",
-            chapter,
-            verse,
-            note
-        });
+            <div class="study-reference">
+
+                ${formatReference(id)}
+
+            </div>
+
+
+            <p>
+                ${note}
+            </p>
+
+
+        </div>
+
+        `;
+
 
     });
+
+
+}
 
 
 
