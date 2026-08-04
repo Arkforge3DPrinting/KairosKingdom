@@ -122,9 +122,20 @@ function openChapter(book, chapter){
     verses.forEach(v => {
 
 
-        verseContent.innerHTML += `
+     const savedHighlights = JSON.parse(
+    localStorage.getItem("arkstudy_highlights") || "[]"
+);
 
-<div class="verse"
+
+const verseText = `${v.verse} ${v.text}`;
+
+
+const isHighlighted = savedHighlights.includes(verseText);
+
+
+verseContent.innerHTML += `
+
+<div class="verse ${isHighlighted ? "highlight" : ""}"
 onclick="highlightVerse(this)">
 
     <span class="verse-number">
@@ -137,7 +148,7 @@ onclick="highlightVerse(this)">
 
 </div>
 
-        `;
+`;
 
 
     });
