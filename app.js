@@ -451,11 +451,8 @@ function openSavedVerse(id){
 
 function loadStudyData(){
 
-    const highlightList =
-        document.getElementById("highlightList");
-
-    const noteList =
-        document.getElementById("noteList");
+const studyList =
+    document.getElementById("studyList");
 
     const highlights = JSON.parse(
         localStorage.getItem("arkstudy_highlights") || "[]"
@@ -465,7 +462,7 @@ function loadStudyData(){
         localStorage.getItem("arkstudy_notes") || "{}"
     );
 
-    highlightList.innerHTML = "";
+    studyList.innerHTML = "";
     noteList.innerHTML = "";
 
     // Group highlights by book
@@ -505,8 +502,7 @@ Object.entries(groupedHighlights)
 
 )
 .forEach(([book, verses]) => {
-
-        highlightList.innerHTML += `
+studyList.innerHTML += `
             <h3 class="study-book">📖 ${book}</h3>
         `;
 
@@ -522,7 +518,7 @@ Object.entries(groupedHighlights)
 
         verses.forEach(item => {
 
-            highlightList.innerHTML += `
+            studyList.innerHTML += `
                 <div
                     class="study-item"
                     onclick="openSavedVerse('${item.id}')"
