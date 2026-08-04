@@ -393,11 +393,12 @@ function formatReference(id){
 
 }
 
-function formatReference(id){
+
+function getBookFromId(id){
 
     const parts = id.split("_");
 
-    return `${parts[0]} ${parts[1]}:${parts[2]}`;
+    return parts[0];
 
 }
 
@@ -408,17 +409,11 @@ function openStudy(){
     document.querySelector(".layout").style.display = "none";
 
     document.getElementById("studyPanel").style.display = "block";
-function getBookFromId(id){
-
-    const parts = id.split("_");
-
-    return parts[0];
-
-}
 
     loadStudyData();
 
 }
+
 function backToBible(){
 
     document.querySelector(".layout").style.display = "flex";
@@ -474,7 +469,7 @@ function loadStudyData(){
     );
 
 
-    highlightList.innerHTML = "";
+   highlightList.innerHTML = "";
 
 
 const groupedHighlights = {};
@@ -484,13 +479,18 @@ highlights.forEach(id => {
 
     const book = getBookFromId(id);
 
+
     if(!groupedHighlights[book]){
+
         groupedHighlights[book] = [];
+
     }
+
 
     groupedHighlights[book].push(id);
 
 });
+
 
 
 Object.entries(groupedHighlights).forEach(([book, verses]) => {
@@ -507,6 +507,7 @@ Object.entries(groupedHighlights).forEach(([book, verses]) => {
 
     verses.forEach(id => {
 
+
         highlightList.innerHTML += `
 
         <div 
@@ -519,6 +520,7 @@ Object.entries(groupedHighlights).forEach(([book, verses]) => {
         </div>
 
         `;
+
 
     });
 
