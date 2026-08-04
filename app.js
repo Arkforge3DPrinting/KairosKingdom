@@ -504,12 +504,12 @@ function loadStudyData(){
     const grouped = {};
 
 
-
-    // Combine highlights + notes together
-    const allVerses = new Set([
-        ...highlights,
-        ...Object.keys(notes)
-    ]);
+    const allVerses = [
+        ...new Set([
+            ...highlights,
+            ...Object.keys(notes)
+        ])
+    ];
 
 
 
@@ -531,46 +531,38 @@ function loadStudyData(){
 
         grouped[book].push({
 
-            id,
-            chapter,
-            verse,
-            highlighted: highlights.includes(id),
-            note: notes[id] && notes[id].trim() !== "" 
-    ? notes[id] 
-    : null
+            id:id,
+            chapter:chapter,
+            verse:verse,
+            highlighted:highlights.includes(id),
+            note:notes[id] || null
 
         });
-
 
     });
 
 
 
-    // Sort books alphabetically
     Object.keys(grouped)
     .sort((a,b)=>a.localeCompare(b))
-    .forEach(book => {
+    .forEach(book=>{
 
 
-        studyList.innerHTML += `
+        const card = document.createElement("div");
 
-        <div class="study-book-card">
+        card.className = "study-book-card";
+
+
+        card.innerHTML = `
 
             <h3>
                 📖 ${book}
             </h3>
 
-
-        </div>
-
         `;
 
 
-        const bookCard = studyList.lastElementChild;
 
-
-
-        // Sort verses by chapter then verse
         grouped[book]
         .sort((a,b)=>{
 
@@ -583,42 +575,53 @@ function loadStudyData(){
             return a.verse - b.verse;
 
         })
-        .forEach(item => {
+        .forEach(item=>{
 
 
-            bookCard.innerHTML += `
+            const entry = document.createElement("div");
 
-            <div 
-                class="study-item"
-                onclick="openSavedVerse('${item.id}')"
-            >
+            entry.className = "study-item";
+
+
+            entry.onclick = () => {
+
+                openSavedVerse(item.id);
+
+            };
+
+
+            entry.innerHTML = `
 
                 <div class="study-reference">
-
                     ${formatReference(item.id)}
-
                 </div>
 
 
-                ${item.highlighted ? "🖍 Highlighted" : ""}
+                <div>
 
-                ${item.note ? "📝 Note saved" : ""}
+                    ${item.highlighted ? "🖍 Highlighted" : ""}
 
+                    ${item.note ? "📝 Note saved" : ""}
 
-            </div>
+                </div>
 
             `;
+
+
+            card.appendChild(entry);
 
 
         });
 
 
 
+        studyList.appendChild(card);
+
+
     });
 
 
 }
-
 
 loadBible();
 
