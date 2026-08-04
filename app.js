@@ -222,7 +222,44 @@ function searchBible(){
 
 }
 
+function highlightVerse(element){
 
+    element.classList.toggle("highlight");
+
+
+    const highlights = JSON.parse(
+        localStorage.getItem("arkstudy_highlights") || "[]"
+    );
+
+
+    const text = element.innerText;
+
+
+    if(element.classList.contains("highlight")){
+
+        highlights.push(text);
+
+    }
+    else{
+
+        const index = highlights.indexOf(text);
+
+        if(index > -1){
+
+            highlights.splice(index,1);
+
+        }
+
+    }
+
+
+    localStorage.setItem(
+        "arkstudy_highlights",
+        JSON.stringify(highlights)
+    );
+
+
+}
 
 loadBible();
 
