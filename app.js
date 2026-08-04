@@ -343,6 +343,60 @@ function copyVerse(){
     hideVerseMenu();
 
 }
+function openNoteBox(){
+
+    if(!selectedVerse){
+        return;
+    }
+
+
+    const noteBox = document.getElementById("noteBox");
+
+    const input = document.getElementById("noteInput");
+
+
+    const notes = JSON.parse(
+        localStorage.getItem("arkstudy_notes") || "{}"
+    );
+
+
+    input.value = notes[selectedVerse.innerText] || "";
+
+
+    noteBox.style.display = "block";
+
+
+}
+
+
+
+function saveNote(){
+
+    if(!selectedVerse){
+        return;
+    }
+
+
+    const input = document.getElementById("noteInput");
+
+
+    const notes = JSON.parse(
+        localStorage.getItem("arkstudy_notes") || "{}"
+    );
+
+
+    notes[selectedVerse.innerText] = input.value;
+
+
+    localStorage.setItem(
+        "arkstudy_notes",
+        JSON.stringify(notes)
+    );
+
+
+    document.getElementById("noteBox").style.display="none";
+
+}
 loadBible();
 
 
