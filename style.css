@@ -817,7 +817,7 @@ header p {
 .reader {
 
     position:relative;
-
+    margin-top:40px;
     padding:35px;
 
 }
@@ -830,22 +830,17 @@ header p {
 
     position:absolute;
 
-    top:-25px;
+    top:-32px;
 
-    left:35px;
-
-
-    display:inline-flex;
-
-    width:auto;
+    left:25px;
 
 
-    background:#e7c98b;
+    background:#b8872d;
 
-    color:#3b2f1d;
+    color:white;
 
 
-    padding:10px 25px;
+    padding:12px 28px;
 
 
     border-radius:14px 14px 0 0;
@@ -853,12 +848,14 @@ header p {
 
     font-weight:700;
 
+    font-size:.9rem;
+
 
     cursor:pointer;
 
 
     box-shadow:
-        0 -4px 12px rgba(0,0,0,.12);
+        0 -4px 12px rgba(0,0,0,.15);
 
 
     z-index:10;
