@@ -348,30 +348,18 @@ header p {
 /* ---------- READER ---------- */
 
 
-.reader {
-
-
-    background:
-
-        rgba(255,250,240,.75);
-
-
-    backdrop-filter:blur(15px);
-
-
-    border-radius:22px;
-
-    position:relative;
+.reader{
 
     padding:35px;
 
+    background:
+        rgba(255,250,240,.75);
 
-    box-shadow:
+    border-radius:25px;
 
-        0 15px 35px rgba(0,0,0,.1);
+    margin:25px;
 
 }
-
 
 
 #bookTitle {
@@ -840,47 +828,35 @@ header p {
 
 .folder-tab {
 
-    position:absolute;
+    display:inline-block;
 
-    top:-45px;
-
-    right:40px;
-
+    margin-bottom:20px;
 
     background:#e7c98b;
 
     color:#3b2f1d;
 
+    padding:12px 28px;
 
-    padding:14px 30px;
-
-
-    border-radius:18px 18px 0 0;
-
+    border-radius:16px 16px 0 0;
 
     font-weight:700;
 
-
     cursor:pointer;
 
-
     box-shadow:
-        0 -5px 20px rgba(0,0,0,.15);
+        inset 0 -3px 0 rgba(0,0,0,.08);
 
-
-    transition:.25s;
-
-
-    z-index:5;
+    transition:.2s;
 
 }
 
 
 .folder-tab:hover {
 
-    transform:translateY(-6px);
-
     background:#f1d9a7;
+
+    transform:translateY(-3px);
 
 }
 
