@@ -400,6 +400,10 @@ function saveNote(){
 
     document.getElementById("noteBox").style.display = "none";
 
+if(document.getElementById("studyPanel").style.display === "block"){
+    loadStudyData();
+}
+
 
     // Refresh study page if it is open
     loadStudyData();
