@@ -589,18 +589,19 @@ header p {
 
     display:none;
 
-    position:fixed;
+    position:fixed !important;
 
     bottom:30px;
+
     left:50%;
 
     transform:translateX(-50%);
 
-    background:rgba(255,250,240,.95);
+    background:rgba(255,250,240,0.95);
 
     backdrop-filter:blur(15px);
 
-    padding:15px;
+    padding:15px 20px;
 
     border-radius:20px;
 
@@ -609,10 +610,9 @@ header p {
     box-shadow:
         0 20px 40px rgba(0,0,0,.25);
 
-    z-index:9999;
+    z-index:99999;
 
 }
-
 
 
 .verse-menu button {
@@ -823,11 +823,11 @@ header p {
     }
 
 
-    .reader {
+ .reader {
 
-        padding:20px;
+    padding:35px;
 
-    }
+}
 
 
 }
