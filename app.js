@@ -47,6 +47,11 @@ function openBook(book){
 
     document.getElementById("bookTitle").textContent = book;
 
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
     document.getElementById("verseContent").innerHTML =
         "Select a chapter to begin.";
 
@@ -94,6 +99,11 @@ function openBook(book){
 
 
 function openChapter(book, chapter){
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 
     const verses = bibleVerses.filter(v =>
