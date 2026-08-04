@@ -799,21 +799,6 @@ header p {
 
 }
 
-
-
-/* ---------- MOBILE ---------- */
-
-
-@media(max-width:800px){
-
-
-    .layout {
-
-        grid-template-columns:1fr;
-
-    }
-
-
 .reader {
 
     position:relative;
@@ -874,6 +859,8 @@ header p {
     bottom:-10px;
 
     left:0;
+   
+    width:max-content;
 
     width:100%;
 
@@ -882,3 +869,18 @@ header p {
     background:#e7c98b;
 
 }
+
+/* ---------- MOBILE ---------- */
+
+
+@media(max-width:800px){
+
+
+    .layout {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
