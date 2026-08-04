@@ -617,7 +617,11 @@ function loadStudyData(){
 
                     ${item.highlighted ? "🖍 Highlighted" : ""}
 
-                    ${item.note ? "📝 Note saved" : ""}
+                   ${item.note ? `
+<div class="study-note">
+📝 ${item.note}
+</div>
+` : ""}
 
                 </div>
 
