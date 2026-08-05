@@ -424,7 +424,19 @@ function openStudy(){
     document.getElementById("studyPanel").style.display = "block";
 
     loadStudyData();
+    
+function formatReference(id){
 
+    const parts = id.split("_");
+
+    const book = parts[0];
+    const chapter = parts[1];
+    const verse = parts[2];
+
+
+    return `${book} ${chapter}:${verse}`;
+
+}
 }
 function backToBible(){
 
