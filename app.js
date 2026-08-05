@@ -417,7 +417,15 @@ function saveNote(){
     }
 
 }
+function openStudy(){
 
+    document.querySelector(".layout").style.display = "none";
+
+    document.getElementById("studyPanel").style.display = "block";
+
+    loadStudyData();
+
+}
 function backToBible(){
 
     document.querySelector(".layout").style.display = "flex";
