@@ -1069,105 +1069,104 @@ header p {
 ========================= */
 
 
-#studyPanel{
+#studyPanel {
 
-    padding: 30px;
+    display:none;
+
+    max-width:900px;
+
+    margin:30px auto;
+
+    padding:30px;
 
 }
 
 
 
-#studyList{
-
-    max-width: 900px;
-    margin: 30px auto;
+#studyList {
 
     display:flex;
+
     flex-direction:column;
+
     gap:25px;
 
 }
 
 
 
-/* Book Card */
+/* Book container */
 
-.study-book-card{
+.study-book-card {
 
     background:
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,0.08),
-        rgba(255,255,255,0.02)
-    );
+        rgba(255,250,240,.85);
 
+    border-radius:22px;
 
-    border:1px solid rgba(255,255,255,0.12);
-
-    border-radius:20px;
-
-    padding:20px;
+    padding:22px;
 
     box-shadow:
-    0 10px 30px rgba(0,0,0,0.25);
+        0 12px 30px rgba(0,0,0,.12);
 
-    backdrop-filter:blur(10px);
+    border:
+        1px solid rgba(184,134,59,.2);
 
 }
 
 
 
-/* Book Title */
+/* Book name */
 
-.study-book-card h3{
+.study-book-card h3 {
 
-    margin:0 0 15px 0;
+    color:#5b3a1e;
 
-    font-size:22px;
+    font-size:1.4rem;
 
-    color:#d4af37;
+    margin-bottom:18px;
+
+    padding-bottom:10px;
 
     border-bottom:
-    1px solid rgba(255,255,255,0.15);
-
-    padding-bottom:12px;
+        1px solid rgba(184,134,59,.25);
 
 }
 
 
 
-/* Individual Verse */
+/* Verse card */
 
-.study-item{
+.study-item {
 
     background:
-    rgba(255,255,255,0.05);
+        rgba(255,255,255,.75);
 
-    border-radius:14px;
+    border-radius:16px;
 
-    padding:15px 18px;
+    padding:16px 18px;
 
-    margin-top:12px;
+    margin-bottom:12px;
 
     cursor:pointer;
 
-    transition:
-    transform .2s ease,
-    background .2s ease;
+    transition:.25s;
 
+    border:
+        1px solid rgba(120,90,40,.15);
 
 }
 
 
 
-/* Hover */
-
-.study-item:hover{
+.study-item:hover {
 
     transform:translateX(6px);
 
-    background:
-    rgba(212,175,55,0.12);
+    background:white;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.1);
 
 }
 
@@ -1175,15 +1174,15 @@ header p {
 
 /* Reference */
 
-.study-reference{
+.study-reference {
 
-    font-weight:bold;
+    color:#8c641d;
 
-    font-size:17px;
+    font-weight:700;
+
+    font-size:1.05rem;
 
     margin-bottom:8px;
-
-    color:#ffffff;
 
 }
 
@@ -1191,35 +1190,34 @@ header p {
 
 /* Highlight label */
 
-.study-item div:not(.study-note){
+.study-item > div:not(.study-note) {
 
-    color:#f2d16b;
+    color:#8c641d;
 
 }
 
 
 
-/* Notes */
+/* Note */
 
-.study-note{
+.study-note {
 
-    margin-top:10px;
+    margin-top:12px;
 
-    padding:12px;
-
-    border-radius:12px;
-
+    padding:12px 15px;
 
     background:
-    rgba(0,0,0,0.25);
-
+        rgba(184,134,59,.12);
 
     border-left:
-    3px solid #d4af37;
+        4px solid #b8863b;
 
+    border-radius:10px;
 
-    color:#ddd;
+    color:#4b3825;
 
     font-style:italic;
+
+    line-height:1.5;
 
 }
