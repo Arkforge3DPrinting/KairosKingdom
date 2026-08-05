@@ -41,8 +41,6 @@ async function loadBible(){
 
 }
 
-
-
 function openBook(book){
 
     document.getElementById("bookTitle").textContent = book;
