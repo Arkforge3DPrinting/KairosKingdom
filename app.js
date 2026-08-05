@@ -415,14 +415,6 @@ function saveNote(){
     }
 
 }
-function openStudy(){
-
-    document.querySelector(".layout").style.display = "none";
-
-    document.getElementById("studyPanel").style.display = "block";
-
-    loadStudyData();
-    
 function formatReference(id){
 
     const parts = id.split("_");
@@ -431,10 +423,20 @@ function formatReference(id){
     const chapter = parts[1];
     const verse = parts[2];
 
-
     return `${book} ${chapter}:${verse}`;
 
 }
+
+
+
+function openStudy(){
+
+    document.querySelector(".layout").style.display = "none";
+
+    document.getElementById("studyPanel").style.display = "block";
+
+    loadStudyData();
+
 }
 function backToBible(){
 
