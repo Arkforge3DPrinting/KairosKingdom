@@ -112,7 +112,39 @@ header p {
     gap:12px;
 
 }
+/* ---------- STUDY TIP ---------- */
 
+.study-tip {
+
+    margin:20px auto 0;
+
+    width:fit-content;
+    max-width:90%;
+
+    padding:12px 22px;
+
+    background:
+        rgba(255,250,240,.65);
+
+    backdrop-filter:
+        blur(10px);
+
+    border-radius:30px;
+
+    border:
+        1px solid rgba(184,134,59,.25);
+
+
+    color:#5b3a1e;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.08);
+
+}
 
 
 .search-box input {
