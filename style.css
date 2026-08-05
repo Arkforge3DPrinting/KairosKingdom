@@ -1071,19 +1071,16 @@ header p {
 
 #studyPanel {
 
-    display:none;
-
-    max-width:900px;
-
-    margin:30px auto;
-
     padding:30px;
 
 }
 
 
-
 #studyList {
+
+    max-width:900px;
+
+    margin:30px auto;
 
     display:flex;
 
@@ -1095,65 +1092,93 @@ header p {
 
 
 
-/* Book container */
+/* Bible Book Card */
 
 .study-book-card {
 
+
     background:
-        rgba(255,250,240,.85);
 
-    border-radius:22px;
+        rgba(255,250,240,.88);
 
-    padding:22px;
+
+    border-radius:24px;
+
+
+    padding:25px;
+
 
     box-shadow:
-        0 12px 30px rgba(0,0,0,.12);
+
+        0 15px 35px rgba(0,0,0,.12);
+
 
     border:
-        1px solid rgba(184,134,59,.2);
+
+        1px solid rgba(120,90,40,.15);
+
+
+    backdrop-filter:blur(12px);
+
 
 }
 
 
 
-/* Book name */
+/* Book heading */
 
 .study-book-card h3 {
 
+
     color:#5b3a1e;
 
-    font-size:1.4rem;
 
-    margin-bottom:18px;
+    font-size:1.5rem;
 
-    padding-bottom:10px;
+
+    margin-bottom:20px;
+
+
+    padding-bottom:12px;
+
 
     border-bottom:
+
         1px solid rgba(184,134,59,.25);
 
 }
 
 
 
-/* Verse card */
+/* Verse entries */
 
 .study-item {
 
+
     background:
+
         rgba(255,255,255,.75);
+
 
     border-radius:16px;
 
-    padding:16px 18px;
+
+    padding:18px;
+
 
     margin-bottom:12px;
 
+
     cursor:pointer;
+
 
     transition:.25s;
 
+
     border:
-        1px solid rgba(120,90,40,.15);
+
+        1px solid rgba(120,90,40,.12);
+
 
 }
 
@@ -1161,12 +1186,20 @@ header p {
 
 .study-item:hover {
 
-    transform:translateX(6px);
 
-    background:white;
+    transform:
+
+        translateX(8px);
+
+
+    background:
+
+        rgba(255,255,255,.95);
+
 
     box-shadow:
-        0 8px 20px rgba(0,0,0,.1);
+
+        0 8px 20px rgba(0,0,0,.12);
 
 }
 
@@ -1176,13 +1209,17 @@ header p {
 
 .study-reference {
 
-    color:#8c641d;
 
     font-weight:700;
 
-    font-size:1.05rem;
 
-    margin-bottom:8px;
+    color:#8c641d;
+
+
+    font-size:1.1rem;
+
+
+    margin-bottom:10px;
 
 }
 
@@ -1190,33 +1227,44 @@ header p {
 
 /* Highlight label */
 
-.study-item > div:not(.study-note) {
+.study-item div {
 
-    color:#8c641d;
+
+    color:#5b3a1e;
 
 }
 
 
 
-/* Note */
+/* Note preview */
 
 .study-note {
 
+
     margin-top:12px;
+
 
     padding:12px 15px;
 
+
     background:
+
         rgba(184,134,59,.12);
 
+
     border-left:
+
         4px solid #b8863b;
+
 
     border-radius:10px;
 
-    color:#4b3825;
+
+    color:#5b3a1e;
+
 
     font-style:italic;
+
 
     line-height:1.5;
 
