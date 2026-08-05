@@ -1269,3 +1269,61 @@ header p {
     line-height:1.5;
 
 }
+/* =========================
+   STUDY TAGS
+========================= */
+
+
+.study-tags {
+
+    display:flex;
+
+    gap:8px;
+
+    margin-top:8px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.tag {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:5px 12px;
+
+    border-radius:20px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+
+
+.highlight-tag {
+
+    background:
+
+        rgba(255,210,80,.35);
+
+    color:#7a5a00;
+
+}
+
+
+
+.note-tag {
+
+    background:
+
+        rgba(120,90,40,.15);
+
+    color:#5b3a1e;
+
+}
