@@ -96,8 +96,6 @@ function openBook(book){
 
 }
 
-
-
 function openChapter(book, chapter){
 
     window.scrollTo({
