@@ -630,48 +630,50 @@ function loadStudyData(){
 
 
 
-            entry.innerHTML = `
+           entry.innerHTML = `
 
-                <div class="study-reference">
+    <div class="study-reference">
 
-                    ${formatReference(item.id)}
+        ${formatReference(item.id)}
 
-                </div>
-
-
-              <div class="study-tags">
-
-${item.highlighted ?
-
-    `<span class="tag highlight-tag">
-        🟨 Highlight
-    </span>`
-
-    : ""}
+    </div>
 
 
+    <div class="study-tags">
 
-${item.note ?
+        ${item.highlighted ?
 
-    `<span class="tag note-tag">
-        📝 Note
-    </span>`
+            `<span class="tag highlight-tag">
+                🟨 Highlight
+            </span>`
 
-    : ""}
-
-</div>
-
-
-${item.note ?
-
-    `<div class="study-note">
-        ${item.note}
-    </div>`
-
-    : ""}
+            : ""}
 
 
-            card.appendChild(entry);
+        ${item.note ?
+
+            `<span class="tag note-tag">
+                📝 Note
+            </span>`
+
+            : ""}
+
+    </div>
+
+
+    ${item.note ?
+
+        `<div class="study-note">
+            ${item.note}
+        </div>`
+
+        : ""}
+
+`;
+
+
+
+card.appendChild(entry);
 
 
         });
