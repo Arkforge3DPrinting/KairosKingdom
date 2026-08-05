@@ -639,22 +639,36 @@ function loadStudyData(){
                 </div>
 
 
-                ${item.highlighted ? 
-                    "<div>🖍 Highlighted</div>" 
-                    : ""}
+              <div class="study-tags">
+
+${item.highlighted ?
+
+    `<span class="tag highlight-tag">
+        🟨 Highlight
+    </span>`
+
+    : ""}
 
 
 
-                ${item.note ? 
+${item.note ?
 
-                    `<div class="study-note">
-                        📝 ${item.note}
-                    </div>`
+    `<span class="tag note-tag">
+        📝 Note
+    </span>`
 
-                    : ""}
+    : ""}
+
+</div>
 
 
-            `;
+${item.note ?
+
+    `<div class="study-note">
+        ${item.note}
+    </div>`
+
+    : ""}
 
 
             card.appendChild(entry);
