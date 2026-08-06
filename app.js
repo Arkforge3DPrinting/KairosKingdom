@@ -807,10 +807,11 @@ function openWordStudy(){
    🔎 Explore the original meaning of Biblical words. 🔎
     </p>
 
-    <input 
-    id="wordSearch"
-    placeholder="Example: abide"
-    >
+<input 
+id="wordSearch"
+class="word-search-input"
+placeholder="Example: Kingdom, Faith, Resurrection"
+>
 
     <button onclick="searchWord()">
     Search
