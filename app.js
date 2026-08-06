@@ -693,18 +693,25 @@ card.appendChild(entry);
 loadBible();
 
 
-document
-.getElementById("searchButton")
-.onclick = searchBible;
+document.addEventListener("DOMContentLoaded", () => {
 
 
-document
-.getElementById("studyButton")
-.onclick = openStudy;
+    document
+    .getElementById("searchButton")
+    .onclick = searchBible;
 
-document
-.getElementById("wordStudyButton")
-.onclick = openWordStudy;
+
+    document
+    .getElementById("studyButton")
+    .onclick = openStudy;
+
+
+    document
+    .getElementById("wordStudyButton")
+    .onclick = openWordStudy;
+
+
+});
 
 const backWordButton =
 document.getElementById("backWordBibleButton");
