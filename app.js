@@ -707,9 +707,14 @@ document
 .onclick = openWordStudy;
 
 
-document
-.getElementById("backWordBibleButton")
-.onclick = backFromWordStudy;
+const backWordButton =
+document.getElementById("backWordBibleButton");
+
+if(backWordButton){
+
+    backWordButton.onclick = backFromWordStudy;
+
+}
 
 
 const backButton = document.getElementById("backBibleButton");
