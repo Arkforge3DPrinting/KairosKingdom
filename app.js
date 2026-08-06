@@ -852,22 +852,6 @@ function searchWordStudy(){
         return;
     }
 }
-function searchWord(){
-
-    const query = document
-        .getElementById("wordSearch")
-        .value
-        .toLowerCase()
-        .trim();
-
-
-    const result = wordStudyData.find(word =>
-
-        word.word.toLowerCase() === query ||
-        word.transliteration.toLowerCase() === query
-
-    );
-
 
     const output =
     document.getElementById("wordContent");
