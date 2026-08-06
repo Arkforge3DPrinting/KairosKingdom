@@ -1524,3 +1524,36 @@ header p {
     color:#8c641d;
 
 }
+.word-search-box {
+
+    display:flex;
+    justify-content:center;
+    margin:15px 0;
+
+}
+
+
+.word-search-box input {
+
+    width:300px;
+
+    padding:12px 18px;
+
+    border-radius:25px;
+
+    border:1px solid #ccc;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+
+.word-search-box input:focus {
+
+    border-color:#7c5cff;
+
+    box-shadow:0 0 8px rgba(124,92,255,0.3);
+
+}
