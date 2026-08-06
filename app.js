@@ -784,7 +784,19 @@ function openWordStudy(){
 
     document.getElementById("verseMenu").style.display="none";
 
-    document.getElementById("wordBox").style.display="block";
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    const wordBox = document.getElementById("wordBox");
+
+    wordBox.style.display = "block";
+
+    wordBox.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 
 
     document.getElementById("wordContent").innerHTML = `
