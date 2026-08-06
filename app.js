@@ -702,6 +702,15 @@ document
 .getElementById("studyButton")
 .onclick = openStudy;
 
+document
+.getElementById("wordStudyButton")
+.onclick = openWordStudy;
+
+
+document
+.getElementById("backWordBibleButton")
+.onclick = backFromWordStudy;
+
 
 const backButton = document.getElementById("backBibleButton");
 
@@ -785,5 +794,11 @@ function openWordStudy(){
     `;
 
 }
+function backFromWordStudy(){
 
+    document.querySelector(".layout").style.display="grid";
+
+    document.getElementById("wordStudyPanel").style.display="none";
+
+}
 loadDailyVerse();
