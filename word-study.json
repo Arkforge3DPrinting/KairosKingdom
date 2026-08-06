@@ -1,22 +1,17 @@
 [
     {
-        "word":"abide",
-        "original":"μένω",
-        "transliteration":"menō",
-        "strongs":"G3306",
-        "category":"Discipleship",
-        "meaning":"To remain, stay, dwell, continue.",
-        "study":"Jesus uses this word in John 15 to describe remaining connected to Him like a branch remains connected to the vine."
-    },
-
-    {
         "word":"faith",
         "original":"πίστις",
         "transliteration":"pistis",
         "strongs":"G4102",
-        "category":"Discipleship",
-        "meaning":"Faith, trust, confidence, faithfulness.",
-        "study":"Biblical faith is not only belief, but trusting commitment toward God that produces obedience."
+        "category":"Salvation",
+        "meaning":"Faith, trust, confidence, faithfulness, commitment.",
+        "study":"Biblical faith is more than intellectual belief. Pistis describes trusting reliance upon God that produces loyalty, obedience, and faithfulness. Faith receives God's promises and responds with a transformed life.",
+        "verses":[
+            "Ephesians 2:8",
+            "Hebrews 11:1",
+            "James 2:17"
+        ]
     },
 
     {
@@ -26,37 +21,12 @@
         "strongs":"G5485",
         "category":"Salvation",
         "meaning":"Grace, favour, kindness, undeserved blessing.",
-        "study":"Grace describes God's freely given favour toward humanity. Salvation is received as a gift, not earned by works."
-    },
-
-    {
-        "word":"love",
-        "original":"ἀγάπη",
-        "transliteration":"agapē",
-        "strongs":"G26",
-        "category":"Character",
-        "meaning":"Self-giving, sacrificial love.",
-        "study":"Agapē describes God's covenant love demonstrated through Christ and the love believers are called to show others."
-    },
-
-    {
-        "word":"repentance",
-        "original":"μετάνοια",
-        "transliteration":"metanoia",
-        "strongs":"G3341",
-        "category":"Salvation",
-        "meaning":"Change of mind, turning away, transformation of thinking.",
-        "study":"Biblical repentance involves turning from sin and reorienting one's life toward God."
-    },
-
-    {
-        "word":"kingdom",
-        "original":"βασιλεία",
-        "transliteration":"basileia",
-        "strongs":"G932",
-        "category":"Kingdom",
-        "meaning":"Kingdom, reign, royal authority.",
-        "study":"The Kingdom of God describes God's active rule and reign breaking into the world through Jesus."
+        "study":"Charis describes God's freely given favour toward humanity. Salvation is not achieved through human effort but received as a gift through God's mercy and generosity in Christ.",
+        "verses":[
+            "Ephesians 2:8-9",
+            "Romans 3:24",
+            "2 Corinthians 12:9"
+        ]
     },
 
     {
@@ -65,8 +35,238 @@
         "transliteration":"euangelion",
         "strongs":"G2098",
         "category":"Salvation",
-        "meaning":"Good news, announcement of victory.",
-        "study":"The gospel is the announcement of God's saving work through Jesus Christ."
+        "meaning":"Good news, announcement of victory, royal proclamation.",
+        "study":"The gospel is not merely advice about becoming better. It is the announcement that God has acted through Jesus Christ to defeat sin, death, and restore His Kingdom.",
+        "verses":[
+            "Mark 1:14-15",
+            "Romans 1:16",
+            "1 Corinthians 15:1-4"
+        ]
+    },
+
+    {
+        "word":"repentance",
+        "original":"μετάνοια",
+        "transliteration":"metanoia",
+        "strongs":"G3341",
+        "category":"Salvation",
+        "meaning":"Change of mind, turning, transformation of thinking.",
+        "study":"Biblical repentance involves more than regret. Metanoia describes a complete reorientation of the mind and life toward God, turning away from sin and returning to His purposes.",
+        "verses":[
+            "Acts 2:38",
+            "Romans 12:2",
+            "Matthew 4:17"
+        ]
+    },
+
+    {
+        "word":"sin",
+        "original":"ἁμαρτία",
+        "transliteration":"hamartia",
+        "strongs":"G266",
+        "category":"Salvation",
+        "meaning":"Sin, missing the mark, falling short, rebellion against God.",
+        "study":"Hamartia describes humanity's failure to live according to God's holiness. Sin separates humanity from God and reveals our need for redemption through Christ.",
+        "verses":[
+            "Romans 3:23",
+            "Romans 6:23",
+            "1 John 1:9"
+        ]
+    },
+
+    {
+        "word":"salvation",
+        "original":"σωτηρία",
+        "transliteration":"sōtēria",
+        "strongs":"G4991",
+        "category":"Salvation",
+        "meaning":"Salvation, rescue, deliverance, restoration.",
+        "study":"Sōtēria describes God's complete rescue of humanity through Jesus. Salvation includes forgiveness of sins, freedom from bondage, reconciliation with God, and the hope of eternal life.",
+        "verses":[
+            "Romans 10:9-10",
+            "Acts 4:12",
+            "Ephesians 1:7"
+        ]
+    },
+
+    {
+        "word":"redeem",
+        "original":"λυτρόω",
+        "transliteration":"lytroō",
+        "strongs":"G3084",
+        "category":"Salvation",
+        "meaning":"To ransom, release, buy back, set free.",
+        "study":"Redemption describes God freeing humanity from slavery to sin through the sacrifice of Christ. The imagery comes from paying a price to release someone from captivity.",
+        "verses":[
+            "Titus 2:14",
+            "1 Peter 1:18-19",
+            "Galatians 3:13"
+        ]
+    },
+
+    {
+        "word":"justify",
+        "original":"δικαιόω",
+        "transliteration":"dikaioō",
+        "strongs":"G1344",
+        "category":"Salvation",
+        "meaning":"To declare righteous, make right, vindicate.",
+        "study":"Justification describes God's declaration that sinners are made right before Him through faith in Christ. It is a legal image describing a changed status before God.",
+        "verses":[
+            "Romans 5:1",
+            "Romans 8:30",
+            "Galatians 2:16"
+        ]
+    },
+
+    {
+        "word":"righteousness",
+        "original":"δικαιοσύνη",
+        "transliteration":"dikaiosynē",
+        "strongs":"G1343",
+        "category":"Salvation",
+        "meaning":"Righteousness, justice, right standing, God's standard.",
+        "study":"Biblical righteousness describes both God's perfect character and the right standing believers receive through Christ. It also calls believers to live according to God's ways.",
+        "verses":[
+            "Matthew 6:33",
+            "Romans 3:21-22",
+            "2 Corinthians 5:21"
+        ]
+    },
+
+    {
+        "word":"life",
+        "original":"ζωή",
+        "transliteration":"zōē",
+        "strongs":"G2222",
+        "category":"Salvation",
+        "meaning":"Life, spiritual life, eternal life, divine life.",
+        "study":"Zōē describes the life that comes from God. In John's writings it refers especially to the eternal life found through relationship with Jesus, not merely biological existence.",
+        "verses":[
+            "John 1:4",
+            "John 10:10",
+            "John 14:6"
+        ]
+    },
+
+    {
+        "word":"death",
+        "original":"θάνατος",
+        "transliteration":"thanatos",
+        "strongs":"G2288",
+        "category":"Salvation",
+        "meaning":"Death, separation, mortality.",
+        "study":"Scripture presents death as the consequence of sin, but through Christ death is defeated. Jesus brings resurrection life and restoration beyond physical death.",
+        "verses":[
+            "Romans 6:23",
+            "1 Corinthians 15:54-57",
+            "John 11:25"
+        ]
+    },
+
+    {
+        "word":"resurrection",
+        "original":"ἀνάστασις",
+        "transliteration":"anastasis",
+        "strongs":"G386",
+        "category":"Salvation",
+        "meaning":"Rising again, resurrection, restoration of life.",
+        "study":"The resurrection of Jesus is the foundation of Christian hope. Anastasis declares Christ's victory over sin and death and points toward the future resurrection of believers.",
+        "verses":[
+            "Matthew 28:5-6",
+            "1 Corinthians 15:20",
+            "Philippians 3:10"
+        ]
+    },
+
+    {
+        "word":"covenant",
+        "original":"διαθήκη",
+        "transliteration":"diathēkē",
+        "strongs":"G1242",
+        "category":"Theology",
+        "meaning":"Covenant, agreement, promised relationship.",
+        "study":"God's covenant reveals His commitment to His people. The New Covenant established through Jesus brings forgiveness, restoration, and a renewed relationship with God.",
+        "verses":[
+            "Jeremiah 31:31-34",
+            "Luke 22:20",
+            "Hebrews 8:6"
+        ]
+    },
+
+    {
+        "word":"promise",
+        "original":"ἐπαγγελία",
+        "transliteration":"epangelia",
+        "strongs":"G1860",
+        "category":"Theology",
+        "meaning":"Promise, announcement, commitment, divine assurance.",
+        "study":"God's promises reveal His faithfulness. Biblical promises are grounded in God's character rather than human ability, finding their ultimate fulfilment in Christ.",
+        "verses":[
+            "2 Corinthians 1:20",
+            "Hebrews 10:23",
+            "2 Peter 1:4"
+        ]
+    },
+    [
+    {
+        "word":"kingdom",
+        "original":"βασιλεία",
+        "transliteration":"basileia",
+        "strongs":"G932",
+        "category":"Kingdom",
+        "meaning":"Kingdom, reign, rule, royal authority.",
+        "study":"Basileia describes God's active reign and authority. Jesus' message was the arrival of God's Kingdom, where His rule transforms hearts, communities, and creation.",
+        "verses":[
+            "Matthew 4:17",
+            "Matthew 6:33",
+            "Luke 17:20-21"
+        ]
+    },
+
+    {
+        "word":"king",
+        "original":"מֶלֶךְ",
+        "transliteration":"melek",
+        "strongs":"H4428",
+        "category":"Kingdom",
+        "meaning":"King, ruler, sovereign authority.",
+        "study":"Melek describes a ruler with rightful authority. Scripture presents God as the ultimate King whose reign extends over all creation.",
+        "verses":[
+            "Psalm 47:7",
+            "Isaiah 6:5",
+            "Revelation 19:16"
+        ]
+    },
+
+    {
+        "word":"Lord",
+        "original":"κύριος",
+        "transliteration":"kyrios",
+        "strongs":"G2962",
+        "category":"Christology",
+        "meaning":"Lord, master, ruler, owner.",
+        "study":"Calling Jesus Kyrios declares His supreme authority and lordship. In the New Testament this title carries both royal and divine significance.",
+        "verses":[
+            "Romans 10:9",
+            "Philippians 2:11",
+            "Acts 2:36"
+        ]
+    },
+
+    {
+        "word":"authority",
+        "original":"ἐξουσία",
+        "transliteration":"exousia",
+        "strongs":"G1849",
+        "category":"Kingdom",
+        "meaning":"Authority, right, power, jurisdiction.",
+        "study":"Exousia describes rightful authority rather than mere force. Jesus demonstrates authority over sin, sickness, demons, and creation, and commissions His followers with Kingdom authority.",
+        "verses":[
+            "Matthew 28:18",
+            "Luke 10:19",
+            "John 1:12"
+        ]
     },
 
     {
@@ -76,167 +276,129 @@
         "strongs":"G3101",
         "category":"Discipleship",
         "meaning":"Learner, student, follower.",
-        "study":"A disciple is someone who follows Jesus, learns from Him, and is transformed by Him."
+        "study":"A disciple is not simply someone who believes information about Jesus. A disciple follows Jesus, learns His ways, and is transformed into His likeness.",
+        "verses":[
+            "Matthew 4:19",
+            "Luke 9:23",
+            "John 8:31"
+        ]
     },
 
     {
-        "word":"truth",
-        "original":"ἀλήθεια",
-        "transliteration":"alētheia",
-        "strongs":"G225",
-        "category":"Revelation",
-        "meaning":"Truth, reality, faithfulness.",
-        "study":"Biblical truth is God's revealed reality, ultimately revealed through Jesus Christ."
+        "word":"servant",
+        "original":"δοῦλος",
+        "transliteration":"doulos",
+        "strongs":"G1401",
+        "category":"Discipleship",
+        "meaning":"Servant, bondservant, one devoted to another.",
+        "study":"Doulos describes complete belonging and surrender. Paul often identifies himself as a servant of Christ, showing that true freedom comes through devotion to God.",
+        "verses":[
+            "Romans 1:1",
+            "Galatians 1:10",
+            "Philippians 1:1"
+        ]
     },
 
     {
-        "word":"word",
+        "word":"citizenship",
+        "original":"πολίτευμα",
+        "transliteration":"politeuma",
+        "strongs":"G4175",
+        "category":"Kingdom",
+        "meaning":"Citizenship, commonwealth, way of life.",
+        "study":"Paul uses politeuma to describe believers whose ultimate citizenship is in heaven. Christians live as representatives of God's Kingdom while on earth.",
+        "verses":[
+            "Philippians 3:20"
+        ]
+    },
+
+    {
+        "word":"logos",
         "original":"λόγος",
         "transliteration":"logos",
         "strongs":"G3056",
-        "category":"Revelation",
+        "category":"Christology",
         "meaning":"Word, message, reason, divine expression.",
-        "study":"John uses Logos to describe Jesus as God's ultimate self-revelation."
+        "study":"John uses Logos to reveal Jesus as God's eternal Word. Christ is not merely a messenger from God but God's ultimate self-revelation.",
+        "verses":[
+            "John 1:1",
+            "John 1:14",
+            "Hebrews 1:1-3"
+        ]
     },
 
     {
-        "word":"life",
-        "original":"ζωή",
-        "transliteration":"zōē",
-        "strongs":"G2222",
-        "category":"Salvation",
-        "meaning":"Life, spiritual life, eternal life.",
-        "study":"Zōē describes the true life found through relationship with God."
+        "word":"Christ",
+        "original":"Χριστός",
+        "transliteration":"Christos",
+        "strongs":"G5547",
+        "category":"Christology",
+        "meaning":"Anointed One, Messiah, chosen King.",
+        "study":"Christos is the Greek equivalent of Messiah. Jesus is revealed as God's promised King, prophet, and priest who fulfills Scripture's expectations.",
+        "verses":[
+            "Matthew 16:16",
+            "Luke 4:18",
+            "Acts 2:36"
+        ]
     },
 
     {
-        "word":"light",
-        "original":"φῶς",
-        "transliteration":"phōs",
-        "strongs":"G5457",
-        "category":"Revelation",
-        "meaning":"Light, illumination, revelation.",
-        "study":"Light represents God's truth overcoming darkness and revealing His nature."
+        "word":"son",
+        "original":"υἱός",
+        "transliteration":"huios",
+        "strongs":"G5207",
+        "category":"Identity",
+        "meaning":"Son, child, descendant.",
+        "study":"Huios is used for Jesus as the unique Son of God and for believers who receive adoption into God's family through Christ.",
+        "verses":[
+            "John 3:16",
+            "Romans 8:15",
+            "Galatians 4:6"
+        ]
     },
-
-    {
-        "word":"peace",
-        "original":"εἰρήνη",
-        "transliteration":"eirēnē",
-        "strongs":"G1515",
-        "category":"Character",
-        "meaning":"Peace, wholeness, restoration.",
-        "study":"Biblical peace describes restoration and completeness found through God."
-    },
-
-    {
-        "word":"joy",
-        "original":"χαρά",
-        "transliteration":"chara",
-        "strongs":"G5479",
-        "category":"Character",
-        "meaning":"Joy, gladness, delight.",
-        "study":"Christian joy is rooted in God's presence rather than temporary circumstances."
-    },
-
-    {
-        "word":"hope",
-        "original":"ἐλπίς",
-        "transliteration":"elpis",
-        "strongs":"G1680",
-        "category":"Discipleship",
-        "meaning":"Hope, confident expectation.",
-        "study":"Biblical hope is confident trust in God's promises and future restoration."
-    },
-
-    {
-        "word":"holy",
-        "original":"ἅγιος",
-        "transliteration":"hagios",
-        "strongs":"G40",
-        "category":"God",
-        "meaning":"Set apart, sacred, belonging to God.",
-        "study":"Holiness describes God's uniqueness and the believer's calling to reflect Him."
-    },
-
-    {
-        "word":"worship",
-        "original":"προσκυνέω",
-        "transliteration":"proskyneō",
-        "strongs":"G4352",
-        "category":"Discipleship",
-        "meaning":"To bow down, worship, honour.",
-        "study":"Worship is the response of surrender and recognition of God's worth."
-    },
-
-    {
-        "word":"pray",
-        "original":"προσεύχομαι",
-        "transliteration":"proseuchomai",
-        "strongs":"G4336",
-        "category":"Discipleship",
-        "meaning":"To pray, communicate with God.",
-        "study":"Prayer is relational communion with God, bringing our hearts into alignment with Him."
-    },
-
-    {
-        "word":"wisdom",
-        "original":"σοφία",
-        "transliteration":"sophia",
-        "strongs":"G4678",
-        "category":"Wisdom",
-        "meaning":"Wisdom, understanding, insight.",
-        "study":"Biblical wisdom is seeing life from God's perspective and applying His truth."
-    },
-
-    {
-        "word":"glory",
-        "original":"δόξα",
-        "transliteration":"doxa",
-        "strongs":"G1391",
-        "category":"God",
-        "meaning":"Glory, honour, splendour, reputation.",
-        "study":"God's glory refers to His revealed greatness, beauty, and worth."
-    },
-
-    {
-        "word":"righteousness",
-        "original":"δικαιοσύνη",
-        "transliteration":"dikaiosynē",
-        "strongs":"G1343",
-        "category":"Salvation",
-        "meaning":"Righteousness, justice, right standing.",
-        "study":"Through Christ, believers receive right standing with God and are called to live rightly."
-    },
-
-    {
-        "word":"covenant",
-        "original":"διαθήκη",
-        "transliteration":"diathēkē",
-        "strongs":"G1242",
-        "category":"Theology",
-        "meaning":"Covenant, agreement, promise.",
-        "study":"God's covenant describes His committed relationship and promises toward His people."
-    },
-
-    {
+         {
         "word":"Spirit",
         "original":"πνεῦμα",
         "transliteration":"pneuma",
         "strongs":"G4151",
         "category":"Holy Spirit",
-        "meaning":"Spirit, breath, wind.",
-        "study":"Pneuma describes the Holy Spirit's presence and power working within believers."
+        "meaning":"Spirit, breath, wind, life-giving presence.",
+        "study":"Pneuma describes the Holy Spirit, God's active presence and power. The word carries the imagery of breath and wind, showing God's ability to bring life, movement, and transformation.",
+        "verses":[
+            "John 3:8",
+            "Acts 2:1-4",
+            "Romans 8:11"
+        ]
     },
 
     {
-        "word":"church",
-        "original":"ἐκκλησία",
-        "transliteration":"ekklesia",
-        "strongs":"G1577",
-        "category":"Church",
-        "meaning":"Assembly, gathering, called-out people.",
-        "study":"The church is not merely a building but the people called together by God."
+        "word":"ruach",
+        "original":"רוּחַ",
+        "transliteration":"ruach",
+        "strongs":"H7307",
+        "category":"Holy Spirit",
+        "meaning":"Spirit, breath, wind, life force.",
+        "study":"Ruach describes God's Spirit throughout the Old Testament. From creation to prophecy, God's Spirit brings life, empowers His servants, and reveals His presence among His people.",
+        "verses":[
+            "Genesis 1:2",
+            "Ezekiel 37:14",
+            "Isaiah 61:1"
+        ]
+    },
+
+    {
+        "word":"power",
+        "original":"δύναμις",
+        "transliteration":"dynamis",
+        "strongs":"G1411",
+        "category":"Holy Spirit",
+        "meaning":"Power, strength, ability, supernatural capability.",
+        "study":"Dynamis describes God's empowering presence. Jesus promised the Holy Spirit would give believers power to become witnesses and participate in God's mission.",
+        "verses":[
+            "Acts 1:8",
+            "Romans 1:16",
+            "2 Timothy 1:7"
+        ]
     },
 
     {
@@ -246,236 +408,12 @@
         "strongs":"G5545",
         "category":"Holy Spirit",
         "meaning":"Anointing, consecration, empowerment.",
-        "study":"Anointing describes being set apart and empowered by God for His purposes."
-    },
-        {
-        "word":"hesed",
-        "original":"חֶסֶד",
-        "transliteration":"chesed",
-        "strongs":"H2617",
-        "category":"God",
-        "meaning":"Covenant love, steadfast mercy, loving-kindness.",
-        "study":"Hesed describes God's faithful, loyal love that remains committed to His covenant promises."
-    },
-
-    {
-        "word":"shalom",
-        "original":"שָׁלוֹם",
-        "transliteration":"shalom",
-        "strongs":"H7965",
-        "category":"Character",
-        "meaning":"Peace, wholeness, completeness, wellbeing.",
-        "study":"Biblical peace is not merely the absence of conflict but the restoration and flourishing of God's intended order."
-    },
-
-    {
-        "word":"ruach",
-        "original":"רוּחַ",
-        "transliteration":"ruach",
-        "strongs":"H7307",
-        "category":"Holy Spirit",
-        "meaning":"Spirit, breath, wind.",
-        "study":"Ruach describes God's life-giving breath and is used throughout Scripture for the Spirit of God."
-    },
-
-    {
-        "word":"emunah",
-        "original":"אֱמוּנָה",
-        "transliteration":"emunah",
-        "strongs":"H530",
-        "category":"Discipleship",
-        "meaning":"Faithfulness, firmness, trustworthiness.",
-        "study":"Emunah describes a steady, faithful trust that remains committed to God."
-    },
-
-    {
-        "word":"yirah",
-        "original":"יִרְאָה",
-        "transliteration":"yirah",
-        "strongs":"H3374",
-        "category":"Wisdom",
-        "meaning":"Fear, reverence, awe.",
-        "study":"The fear of the Lord describes reverence and awe toward God's holiness and authority."
-    },
-
-    {
-        "word":"selah",
-        "original":"סֶלָה",
-        "transliteration":"selah",
-        "strongs":"H5542",
-        "category":"Worship",
-        "meaning":"Pause, reflect, lift up.",
-        "study":"Found in Psalms, Selah invites the reader to pause and meditate on what has been declared."
-    },
-
-    {
-        "word":"amen",
-        "original":"אָמֵן",
-        "transliteration":"amen",
-        "strongs":"H543",
-        "category":"Faith",
-        "meaning":"Truly, surely, let it be established.",
-        "study":"Amen expresses agreement, confirmation, and trust that something is true."
-    },
-
-    {
-        "word":"abba",
-        "original":"אַבָּא",
-        "transliteration":"abba",
-        "strongs":"H2",
-        "category":"God",
-        "meaning":"Father, intimate relationship with a father.",
-        "study":"Jesus uses Abba to reveal the personal and relational nature of approaching God as Father."
-    },
-
-    {
-        "word":"shepherd",
-        "original":"רָעָה",
-        "transliteration":"ra'ah",
-        "strongs":"H7462",
-        "category":"God",
-        "meaning":"To shepherd, tend, guide, care for.",
-        "study":"The shepherd image reveals God's guidance, protection, and care for His people."
-    },
-
-    {
-        "word":"create",
-        "original":"בָּרָא",
-        "transliteration":"bara",
-        "strongs":"H1254",
-        "category":"Creation",
-        "meaning":"To create, bring into existence.",
-        "study":"Bara is uniquely associated with God's creative power, especially in Genesis."
-    },
-
-    {
-        "word":"image",
-        "original":"צֶלֶם",
-        "transliteration":"tselem",
-        "strongs":"H6754",
-        "category":"Humanity",
-        "meaning":"Image, likeness, representation.",
-        "study":"Humanity being made in God's image speaks of dignity, purpose, and reflecting God's character."
-    },
-
-    {
-        "word":"kavod",
-        "original":"כָּבוֹד",
-        "transliteration":"kavod",
-        "strongs":"H3519",
-        "category":"God",
-        "meaning":"Weight, honour, glory, significance.",
-        "study":"Kavod carries the idea of weight or importance and describes God's magnificent presence."
-    },
-
-    {
-        "word":"presence",
-        "original":"פָּנִים",
-        "transliteration":"panim",
-        "strongs":"H6440",
-        "category":"God",
-        "meaning":"Face, presence, before.",
-        "study":"Seeking God's face describes seeking relationship, closeness, and awareness of His presence."
-    },
-
-    {
-        "word":"chokmah",
-        "original":"חָכְמָה",
-        "transliteration":"chokmah",
-        "strongs":"H2451",
-        "category":"Wisdom",
-        "meaning":"Wisdom, skill, practical understanding.",
-        "study":"Biblical wisdom is the ability to live according to God's design."
-    },
-
-    {
-        "word":"knowledge",
-        "original":"דַּעַת",
-        "transliteration":"da'at",
-        "strongs":"H1847",
-        "category":"Wisdom",
-        "meaning":"Knowledge, understanding, awareness.",
-        "study":"Biblical knowledge involves relational understanding rather than information alone."
-    },
-
-    {
-        "word":"walk",
-        "original":"הָלַךְ",
-        "transliteration":"halak",
-        "strongs":"H1980",
-        "category":"Discipleship",
-        "meaning":"To walk, live, conduct oneself.",
-        "study":"Walking with God describes one's entire manner of life and daily obedience."
-    },
-
-    {
-        "word":"heart",
-        "original":"לֵב",
-        "transliteration":"lev",
-        "strongs":"H3820",
-        "category":"Humanity",
-        "meaning":"Heart, mind, inner person.",
-        "study":"In Hebrew thought the heart represents thoughts, desires, will, and character."
-    },
-
-    {
-        "word":"soul",
-        "original":"נֶפֶשׁ",
-        "transliteration":"nephesh",
-        "strongs":"H5315",
-        "category":"Humanity",
-        "meaning":"Soul, life, person, being.",
-        "study":"Nephesh refers to the whole living person rather than only an invisible spiritual part."
-    },
-
-    {
-        "word":"king",
-        "original":"מֶלֶךְ",
-        "transliteration":"melek",
-        "strongs":"H4428",
-        "category":"Kingdom",
-        "meaning":"King, ruler, sovereign.",
-        "study":"God's kingship reveals His authority, rule, and rightful place over creation."
-    },
-
-    {
-        "word":"servant",
-        "original":"עֶבֶד",
-        "transliteration":"ebed",
-        "strongs":"H5650",
-        "category":"Discipleship",
-        "meaning":"Servant, slave, devoted worker.",
-        "study":"Being God's servant describes belonging to Him and faithfully carrying out His purposes."
-    },
-
-    {
-        "word":"promise",
-        "original":"ἐπαγγελία",
-        "transliteration":"epangelia",
-        "strongs":"G1860",
-        "category":"Theology",
-        "meaning":"Promise, announcement, commitment.",
-        "study":"God's promises reveal His faithfulness and provide hope for His people."
-    },
-
-    {
-        "word":"redeem",
-        "original":"λυτρόω",
-        "transliteration":"lytroō",
-        "strongs":"G3084",
-        "category":"Salvation",
-        "meaning":"To ransom, release, set free.",
-        "study":"Redemption describes Christ freeing humanity from sin through His sacrifice."
-    },
-
-    {
-        "word":"justify",
-        "original":"δικαιόω",
-        "transliteration":"dikaioō",
-        "strongs":"G1344",
-        "category":"Salvation",
-        "meaning":"To declare righteous, make right.",
-        "study":"Justification describes God's declaration that believers are made right with Him through Christ."
+        "study":"Anointing describes being set apart and empowered by God for His purposes. In the New Testament believers receive anointing through the Holy Spirit who teaches and guides them.",
+        "verses":[
+            "1 John 2:20",
+            "1 John 2:27",
+            "Luke 4:18"
+        ]
     },
 
     {
@@ -485,7 +423,27 @@
         "strongs":"G37",
         "category":"Transformation",
         "meaning":"To make holy, set apart, consecrate.",
-        "study":"Sanctification describes God's ongoing work of transforming believers into Christ's likeness."
+        "study":"Sanctification describes God's work of making believers holy. It involves both being set apart for God and being transformed into Christ's likeness through the Spirit.",
+        "verses":[
+            "John 17:17",
+            "1 Thessalonians 5:23",
+            "Hebrews 10:10"
+        ]
+    },
+
+    {
+        "word":"holiness",
+        "original":"ἁγιασμός",
+        "transliteration":"hagiasmos",
+        "strongs":"G38",
+        "category":"Transformation",
+        "meaning":"Sanctification, holiness, being made holy.",
+        "study":"Hagiasmos describes the ongoing process of becoming increasingly shaped by God's character. Holiness is not merely separation from sin but belonging fully to God.",
+        "verses":[
+            "Romans 6:19",
+            "1 Thessalonians 4:3",
+            "Hebrews 12:14"
+        ]
     },
 
     {
@@ -495,236 +453,310 @@
         "strongs":"G3339",
         "category":"Transformation",
         "meaning":"To transform, change form, be changed.",
-        "study":"Paul uses this word to describe believers being transformed by the renewing of their minds."
-    },
-        {
-        "word":"agapē",
-        "original":"ἀγάπη",
-        "transliteration":"agapē",
-        "strongs":"G26",
-        "category":"Character",
-        "meaning":"Love, self-giving love, divine love.",
-        "study":"The New Testament uses agapē to describe God's sacrificial love demonstrated through Christ."
+        "study":"Metamorphoō describes deep inner transformation. Paul uses this word to describe believers being changed through the renewing of their minds and becoming more like Christ.",
+        "verses":[
+            "Romans 12:2",
+            "2 Corinthians 3:18",
+            "Matthew 17:2"
+        ]
     },
 
     {
-        "word":"hamartia",
-        "original":"ἁμαρτία",
-        "transliteration":"hamartia",
-        "strongs":"G266",
-        "category":"Salvation",
-        "meaning":"Sin, missing the mark, falling short.",
-        "study":"Sin describes humanity's separation from God's holiness and our need for redemption."
-    },
-
-    {
-        "word":"sōtēria",
-        "original":"σωτηρία",
-        "transliteration":"sōtēria",
-        "strongs":"G4991",
-        "category":"Salvation",
-        "meaning":"Salvation, deliverance, rescue.",
-        "study":"Salvation includes forgiveness, deliverance from sin, and restoration into relationship with God."
-    },
-
-    {
-        "word":"koinōnia",
-        "original":"κοινωνία",
-        "transliteration":"koinōnia",
-        "strongs":"G2842",
-        "category":"Church",
-        "meaning":"Fellowship, partnership, sharing, communion.",
-        "study":"Koinōnia describes spiritual fellowship believers share with God and one another."
-    },
-
-    {
-        "word":"rhēma",
-        "original":"ῥῆμα",
-        "transliteration":"rhēma",
-        "strongs":"G4487",
-        "category":"Revelation",
-        "meaning":"Spoken word, saying, utterance.",
-        "study":"Rhēma refers to a spoken message or declaration, especially God's communicated truth."
-    },
-
-    {
-        "word":"dynamis",
-        "original":"δύναμις",
-        "transliteration":"dynamis",
-        "strongs":"G1411",
-        "category":"Holy Spirit",
-        "meaning":"Power, strength, ability, miraculous power.",
-        "study":"Dynamis describes God's supernatural power, especially through the Holy Spirit."
-    },
-
-    {
-        "word":"exousia",
-        "original":"ἐξουσία",
-        "transliteration":"exousia",
-        "strongs":"G1849",
-        "category":"Kingdom",
-        "meaning":"Authority, right, jurisdiction, power.",
-        "study":"Jesus demonstrates divine authority over sin, sickness, demons, and creation."
-    },
-
-    {
-        "word":"kyrios",
-        "original":"κύριος",
-        "transliteration":"kyrios",
-        "strongs":"G2962",
-        "category":"Christology",
-        "meaning":"Lord, master, ruler.",
-        "study":"Calling Jesus Kyrios declares His authority, lordship, and divine rule."
-    },
-
-    {
-        "word":"doulos",
-        "original":"δοῦλος",
-        "transliteration":"doulos",
-        "strongs":"G1401",
-        "category":"Discipleship",
-        "meaning":"Servant, slave, bondservant.",
-        "study":"Paul describes himself as a servant of Christ, showing complete devotion and surrender."
-    },
-
-    {
-        "word":"diakonia",
-        "original":"διακονία",
-        "transliteration":"diakonia",
-        "strongs":"G1248",
-        "category":"Church",
-        "meaning":"Service, ministry, assistance.",
-        "study":"Christian ministry follows Christ's example of humble service toward others."
-    },
-
-    {
-        "word":"huios",
-        "original":"υἱός",
-        "transliteration":"huios",
-        "strongs":"G5207",
-        "category":"Identity",
-        "meaning":"Son, child, descendant.",
-        "study":"Used of Jesus as the Son of God and believers' adoption into God's family."
-    },
-
-    {
-        "word":"pater",
-        "original":"πατήρ",
-        "transliteration":"patēr",
-        "strongs":"G3962",
-        "category":"God",
-        "meaning":"Father, ancestor, origin.",
-        "study":"Jesus reveals God as Father, showing intimacy, care, and relationship."
-    },
-
-    {
-        "word":"aletheia",
-        "original":"ἀλήθεια",
-        "transliteration":"alētheia",
-        "strongs":"G225",
-        "category":"Revelation",
-        "meaning":"Truth, reality, sincerity.",
-        "study":"Jesus declares Himself to be the truth, revealing God's ultimate reality."
-    },
-
-    {
-        "word":"pneumatikos",
-        "original":"πνευματικός",
-        "transliteration":"pneumatikos",
-        "strongs":"G4152",
-        "category":"Holy Spirit",
-        "meaning":"Spiritual, belonging to the Spirit.",
-        "study":"Paul uses this word for things influenced and empowered by the Holy Spirit."
-    },
-
-    {
-        "word":"teleios",
-        "original":"τέλειος",
-        "transliteration":"teleios",
-        "strongs":"G5046",
-        "category":"Transformation",
-        "meaning":"Complete, mature, perfected.",
-        "study":"Spiritual maturity involves becoming complete and formed according to God's purposes."
-    },
-
-    {
-        "word":"hagiasmos",
-        "original":"ἁγιασμός",
-        "transliteration":"hagiasmos",
-        "strongs":"G38",
-        "category":"Transformation",
-        "meaning":"Sanctification, holiness, being set apart.",
-        "study":"Sanctification describes the ongoing process of becoming more like Christ."
-    },
-
-    {
-        "word":"morphē",
-        "original":"μορφή",
-        "transliteration":"morphē",
-        "strongs":"G3444",
-        "category":"Christology",
-        "meaning":"Form, nature, appearance.",
-        "study":"Philippians describes Christ existing in the form of God and taking the form of a servant."
-    },
-
-    {
-        "word":"eikōn",
-        "original":"εἰκών",
-        "transliteration":"eikōn",
-        "strongs":"G1504",
-        "category":"Humanity",
-        "meaning":"Image, likeness, representation.",
-        "study":"Christ reveals the perfect image of the invisible God, and humanity is created to reflect Him."
-    },
-
-    {
-        "word":"ktisis",
-        "original":"κτίσις",
-        "transliteration":"ktisis",
-        "strongs":"G2937",
-        "category":"Creation",
-        "meaning":"Creation, creature, new creation.",
-        "study":"In Christ believers become a new creation through God's renewing work."
-    },
-
-    {
-        "word":"anakainōsis",
+        "word":"renewal",
         "original":"ἀνακαίνωσις",
         "transliteration":"anakainōsis",
         "strongs":"G342",
         "category":"Transformation",
         "meaning":"Renewal, restoration, making new.",
-        "study":"The Holy Spirit brings inner renewal and transformation in believers."
+        "study":"Anakainōsis describes God's ongoing renewal of the inner person. Through the Holy Spirit, believers are restored and reshaped according to God's purposes.",
+        "verses":[
+            "Romans 12:2",
+            "Titus 3:5",
+            "2 Corinthians 4:16"
+        ]
     },
 
     {
-        "word":"zōē",
-        "original":"ζωή",
-        "transliteration":"zōē",
-        "strongs":"G2222",
-        "category":"Salvation",
-        "meaning":"Life, spiritual life, eternal life.",
-        "study":"John uses zōē to describe the eternal life found in Jesus Christ."
+        "word":"maturity",
+        "original":"τέλειος",
+        "transliteration":"teleios",
+        "strongs":"G5046",
+        "category":"Transformation",
+        "meaning":"Complete, mature, brought to fullness.",
+        "study":"Teleios describes spiritual maturity and completeness. Christian growth involves becoming fully formed in Christ rather than remaining spiritually immature.",
+        "verses":[
+            "Matthew 5:48",
+            "Ephesians 4:13",
+            "James 1:4"
+        ]
     },
 
     {
-        "word":"thanatos",
-        "original":"θάνατος",
-        "transliteration":"thanatos",
-        "strongs":"G2288",
-        "category":"Salvation",
-        "meaning":"Death, separation, mortality.",
-        "study":"Scripture contrasts death brought by sin with eternal life found in Christ."
+        "word":"image",
+        "original":"εἰκών",
+        "transliteration":"eikōn",
+        "strongs":"G1504",
+        "category":"Christology",
+        "meaning":"Image, likeness, representation.",
+        "study":"Eikōn describes representation and likeness. Jesus is the perfect image of the invisible God, and believers are being restored to reflect His character.",
+        "verses":[
+            "Colossians 1:15",
+            "Romans 8:29",
+            "2 Corinthians 3:18"
+        ]
     },
 
     {
-        "word":"anastasis",
-        "original":"ἀνάστασις",
-        "transliteration":"anastasis",
-        "strongs":"G386",
-        "category":"Salvation",
-        "meaning":"Resurrection, rising again.",
-        "study":"The resurrection of Jesus is central to Christian hope and victory over death."
+        "word":"fruit",
+        "original":"καρπός",
+        "transliteration":"karpos",
+        "strongs":"G2590",
+        "category":"Transformation",
+        "meaning":"Fruit, result, evidence, outcome.",
+        "study":"Biblical fruit represents the visible evidence of God's work within a person. The Spirit produces Christlike character in those who remain connected to Him.",
+        "verses":[
+            "Galatians 5:22-23",
+            "John 15:5",
+            "Matthew 7:17"
+        ]
+    },
+
+    {
+        "word":"remain",
+        "original":"μένω",
+        "transliteration":"menō",
+        "strongs":"G3306",
+        "category":"Discipleship",
+        "meaning":"To remain, abide, dwell, continue.",
+        "study":"Menō describes the continual relationship between Christ and His followers. Jesus uses this word in John 15 to describe spiritual life flowing from remaining connected to Him.",
+        "verses":[
+            "John 15:4",
+            "John 15:5",
+            "1 John 2:6"
+        ]
+    },
+         {
+        "word":"hesed",
+        "original":"חֶסֶד",
+        "transliteration":"chesed",
+        "strongs":"H2617",
+        "category":"God",
+        "meaning":"Covenant love, steadfast mercy, faithful kindness.",
+        "study":"Hesed describes God's loyal and covenant-keeping love. It is not merely emotion but committed faithfulness expressed through mercy, compassion, and enduring relationship.",
+        "verses":[
+            "Exodus 34:6",
+            "Psalm 136:1",
+            "Lamentations 3:22-23"
+        ]
+    },
+
+    {
+        "word":"shalom",
+        "original":"שָׁלוֹם",
+        "transliteration":"shalom",
+        "strongs":"H7965",
+        "category":"God",
+        "meaning":"Peace, wholeness, completeness, flourishing.",
+        "study":"Shalom means far more than the absence of conflict. It describes the restoration, completeness, and wellbeing that comes when creation is aligned with God's design.",
+        "verses":[
+            "Numbers 6:24-26",
+            "Isaiah 9:6",
+            "John 14:27"
+        ]
+    },
+
+    {
+        "word":"holy",
+        "original":"קָדוֹשׁ",
+        "transliteration":"qadosh",
+        "strongs":"H6918",
+        "category":"God",
+        "meaning":"Holy, set apart, unique, sacred.",
+        "study":"Qadosh describes God's absolute uniqueness and purity. God's holiness is not simply separation from sin but His incomparable nature and complete otherness.",
+        "verses":[
+            "Isaiah 6:3",
+            "Leviticus 19:2",
+            "1 Peter 1:15-16"
+        ]
+    },
+
+    {
+        "word":"glory",
+        "original":"כָּבוֹד",
+        "transliteration":"kavod",
+        "strongs":"H3519",
+        "category":"God",
+        "meaning":"Weight, honour, glory, significance, splendour.",
+        "study":"Kavod literally carries the idea of weight or significance. God's glory refers to His revealed greatness, majesty, and undeniable worth.",
+        "verses":[
+            "Exodus 33:18",
+            "Isaiah 6:3",
+            "John 1:14"
+        ]
+    },
+
+    {
+        "word":"presence",
+        "original":"פָּנִים",
+        "transliteration":"panim",
+        "strongs":"H6440",
+        "category":"God",
+        "meaning":"Face, presence, before, relationship.",
+        "study":"Seeking God's face describes pursuing relationship and closeness with Him. God's presence represents His personal involvement and covenant relationship with His people.",
+        "verses":[
+            "Psalm 27:8",
+            "Exodus 33:14",
+            "Psalm 16:11"
+        ]
+    },
+
+    {
+        "word":"wisdom",
+        "original":"חָכְמָה",
+        "transliteration":"chokmah",
+        "strongs":"H2451",
+        "category":"Wisdom",
+        "meaning":"Wisdom, skill, understanding, practical knowledge.",
+        "study":"Biblical wisdom is not simply intelligence. Chokmah is the ability to live according to God's design and apply His truth in everyday life.",
+        "verses":[
+            "Proverbs 9:10",
+            "Proverbs 3:13",
+            "James 1:5"
+        ]
+    },
+
+    {
+        "word":"knowledge",
+        "original":"דַּעַת",
+        "transliteration":"da'at",
+        "strongs":"H1847",
+        "category":"Wisdom",
+        "meaning":"Knowledge, understanding, awareness, perception.",
+        "study":"Biblical knowledge is relational rather than merely informational. To know God involves recognising Him, trusting Him, and walking according to His ways.",
+        "verses":[
+            "Hosea 6:6",
+            "Proverbs 2:6",
+            "Jeremiah 9:24"
+        ]
+    },
+
+    {
+        "word":"fear of the Lord",
+        "original":"יִרְאָה",
+        "transliteration":"yirah",
+        "strongs":"H3374",
+        "category":"Wisdom",
+        "meaning":"Fear, reverence, awe, honour.",
+        "study":"Yirah describes reverence and awe toward God. It is not terror but a deep recognition of God's holiness, authority, and worth that produces wisdom and obedience.",
+        "verses":[
+            "Proverbs 9:10",
+            "Ecclesiastes 12:13",
+            "Psalm 111:10"
+        ]
+    },
+
+    {
+        "word":"heart",
+        "original":"לֵב",
+        "transliteration":"lev",
+        "strongs":"H3820",
+        "category":"Humanity",
+        "meaning":"Heart, mind, inner person, will.",
+        "study":"In Hebrew thought, the heart is the centre of a person's thoughts, desires, decisions, and character. Transformation begins with the heart being renewed by God.",
+        "verses":[
+            "Proverbs 4:23",
+            "Ezekiel 36:26",
+            "Matthew 5:8"
+        ]
+    },
+
+    {
+        "word":"soul",
+        "original":"נֶפֶשׁ",
+        "transliteration":"nephesh",
+        "strongs":"H5315",
+        "category":"Humanity",
+        "meaning":"Soul, life, person, living being.",
+        "study":"Nephesh refers to the whole living person rather than only an invisible spiritual part. It describes one's life, desires, identity, and being.",
+        "verses":[
+            "Genesis 2:7",
+            "Psalm 42:1",
+            "Matthew 22:37"
+        ]
+    },
+
+    {
+        "word":"walk",
+        "original":"הָלַךְ",
+        "transliteration":"halak",
+        "strongs":"H1980",
+        "category":"Discipleship",
+        "meaning":"To walk, live, conduct one's life.",
+        "study":"Halak uses the picture of walking to describe a person's entire manner of life. Walking with God means daily obedience, relationship, and faithfulness.",
+        "verses":[
+            "Genesis 5:24",
+            "Micah 6:8",
+            "Ephesians 4:1"
+        ]
+    },
+        {
+        "word":"church",
+        "original":"ἐκκλησία",
+        "transliteration":"ekklesia",
+        "strongs":"G1577",
+        "category":"Church",
+        "meaning":"Assembly, gathering, called-out people.",
+        "study":"Ekklesia does not primarily describe a building but a people gathered by God. The Church is the community of believers called to represent Christ and participate in His mission.",
+        "verses":[
+            "Matthew 16:18",
+            "Acts 2:42-47",
+            "1 Corinthians 12:27"
+        ]
+    },
+
+    {
+        "word":"fellowship",
+        "original":"κοινωνία",
+        "transliteration":"koinōnia",
+        "strongs":"G2842",
+        "category":"Church",
+        "meaning":"Fellowship, partnership, sharing, participation.",
+        "study":"Koinōnia describes the shared life believers have with God and with one another. Christian fellowship is deeper than social connection; it is participation in the life of Christ.",
+        "verses":[
+            "Acts 2:42",
+            "1 John 1:3",
+            "Philippians 1:5"
+        ]
+    },
+
+    {
+        "word":"service",
+        "original":"διακονία",
+        "transliteration":"diakonia",
+        "strongs":"G1248",
+        "category":"Church",
+        "meaning":"Service, ministry, assistance, practical care.",
+        "study":"Diakonia reflects Christ's model of humble service. Christian ministry is not primarily about status but serving others through love and obedience.",
+        "verses":[
+            "Mark 10:45",
+            "Acts 6:1-4",
+            "1 Peter 4:10"
+        ]
+    },
+
+    {
+        "word":"ministry",
+        "original":"διακονέω",
+        "transliteration":"diakoneō",
+        "strongs":"G1247",
+        "category":"Church",
+        "meaning":"To serve, attend to, minister.",
+        "study":"Diakoneō describes actively serving others. Jesus used this pattern of servant leadership as the foundation for Christian ministry.",
+        "verses":[
+            "Matthew 20:26-28",
+            "Luke 22:26-27",
+            "Romans 12:7"
+        ]
     },
 
     {
@@ -732,28 +764,295 @@
         "original":"κλῆσις",
         "transliteration":"klēsis",
         "strongs":"G2821",
-        "category":"Discipleship",
-        "meaning":"Calling, invitation, vocation.",
-        "study":"Believers are called to live according to God's purpose and identity in Christ."
+        "category":"Identity",
+        "meaning":"Calling, invitation, vocation, divine purpose.",
+        "study":"Biblical calling describes God's invitation into relationship and purpose. Every believer is called first to Christ and then to live according to His purposes.",
+        "verses":[
+            "Ephesians 4:1",
+            "Romans 8:28",
+            "2 Timothy 1:9"
+        ]
     },
 
     {
-        "word":"mission",
+        "word":"send",
         "original":"ἀποστέλλω",
         "transliteration":"apostellō",
         "strongs":"G649",
-        "category":"Discipleship",
-        "meaning":"To send, commission, send forth.",
-        "study":"Jesus sends His followers into the world as His representatives."
+        "category":"Mission",
+        "meaning":"To send, commission, send forth with purpose.",
+        "study":"Apostellō carries the idea of being sent as a representative. Jesus sends His followers into the world as His witnesses and ambassadors.",
+        "verses":[
+            "John 20:21",
+            "Matthew 28:19-20",
+            "Acts 1:8"
+        ]
     },
 
     {
-        "word":"kingdom citizen",
-        "original":"πολίτευμα",
-        "transliteration":"politeuma",
-        "strongs":"G4175",
-        "category":"Kingdom",
-        "meaning":"Citizenship, commonwealth, way of life.",
-        "study":"Paul describes believers as citizens whose true belonging is in God's Kingdom."
-    }
-]
+        "word":"witness",
+        "original":"μάρτυς",
+        "transliteration":"martys",
+        "strongs":"G3144",
+        "category":"Mission",
+        "meaning":"Witness, one who testifies, one who gives evidence.",
+        "study":"A witness is someone who testifies to what they have experienced and know to be true. Believers are called to testify about Jesus through words and actions.",
+        "verses":[
+            "Acts 1:8",
+            "Acts 4:20",
+            "Revelation 12:11"
+        ]
+    },
+
+    {
+        "word":"ambassador",
+        "original":"πρεσβεύω",
+        "transliteration":"presbeuō",
+        "strongs":"G4243",
+        "category":"Identity",
+        "meaning":"To represent, act as an ambassador.",
+        "study":"Paul describes believers as ambassadors for Christ. Christians represent the values, message, and character of God's Kingdom in the world.",
+        "verses":[
+            "2 Corinthians 5:20"
+        ]
+    },
+
+    {
+        "word":"adoption",
+        "original":"υἱοθεσία",
+        "transliteration":"huiothesia",
+        "strongs":"G5206",
+        "category":"Identity",
+        "meaning":"Adoption, placement as a child, receiving family status.",
+        "study":"Huiothesia describes believers being brought into God's family through Christ. Salvation is not only forgiveness but receiving a new identity as God's children.",
+        "verses":[
+            "Romans 8:15",
+            "Galatians 4:5-7",
+            "Ephesians 1:5"
+        ]
+    },
+
+    {
+        "word":"new creation",
+        "original":"καινὴ κτίσις",
+        "transliteration":"kainē ktisis",
+        "strongs":"G2537/G2937",
+        "category":"Identity",
+        "meaning":"New creation, renewed humanity, restored existence.",
+        "study":"Through Christ, believers become a new creation. This describes God's renewing work that transforms identity, desires, and relationship with Him.",
+        "verses":[
+            "2 Corinthians 5:17",
+            "Galatians 6:15",
+            "Ephesians 4:24"
+        ]
+    },
+
+    {
+        "word":"body",
+        "original":"σῶμα",
+        "transliteration":"sōma",
+        "strongs":"G4983",
+        "category":"Church",
+        "meaning":"Body, physical body, united community.",
+        "study":"Paul describes the Church as the body of Christ. Believers are individually different yet spiritually connected and dependent upon one another.",
+        "verses":[
+            "1 Corinthians 12:12-27",
+            "Romans 12:4-5",
+            "Ephesians 4:15-16"
+        ]
+    },
+
+    {
+        "word":"unity",
+        "original":"ἑνότης",
+        "transliteration":"henotēs",
+        "strongs":"G1775",
+        "category":"Church",
+        "meaning":"Unity, oneness, harmony.",
+        "study":"Christian unity is based on the shared reality of one Lord, one faith, and one Spirit. It reflects God's desire for His people to live together in love.",
+        "verses":[
+            "Ephesians 4:3-6",
+            "John 17:21",
+            "Colossians 3:14"
+        ]
+    },
+        ,
+{
+    "word":"paraklētos",
+    "original":"παράκλητος",
+    "transliteration":"paraklētos",
+    "strongs":"G3875",
+    "category":"Holy Spirit",
+    "meaning":"Helper, advocate, comforter, one called alongside.",
+    "study":"Jesus uses Paraklētos to describe the Holy Spirit as the Helper who teaches, guides, comforts, and empowers believers."
+},
+
+{
+    "word":"ekklesia",
+    "original":"ἐκκλησία",
+    "transliteration":"ekklēsia",
+    "strongs":"G1577",
+    "category":"Church",
+    "meaning":"Assembly, congregation, called-out community.",
+    "study":"Ekklesia originally referred to an assembly of people and became the New Testament term for God's gathered people."
+},
+
+{
+    "word":"apostle",
+    "original":"ἀπόστολος",
+    "transliteration":"apostolos",
+    "strongs":"G652",
+    "category":"Discipleship",
+    "meaning":"Messenger, one sent, commissioned representative.",
+    "study":"An apostle is someone sent with authority to represent another, especially Christ's commissioned witnesses."
+},
+
+{
+    "word":"prophecy",
+    "original":"προφητεία",
+    "transliteration":"prophēteia",
+    "strongs":"G4394",
+    "category":"Holy Spirit",
+    "meaning":"Speaking forth, proclamation, inspired message.",
+    "study":"Biblical prophecy involves communicating God's message and calling people toward His purposes."
+},
+
+{
+    "word":"gift",
+    "original":"χάρισμα",
+    "transliteration":"charisma",
+    "strongs":"G5486",
+    "category":"Holy Spirit",
+    "meaning":"Gift of grace, spiritual gift, gracious ability.",
+    "study":"Spiritual gifts are expressions of God's grace given for serving others and building up the Church."
+},
+
+{
+    "word":"fruit",
+    "original":"καρπός",
+    "transliteration":"karpos",
+    "strongs":"G2590",
+    "category":"Transformation",
+    "meaning":"Fruit, result, evidence, outcome.",
+    "study":"The fruit of the Spirit describes the visible character produced by God's work within believers."
+},
+
+{
+    "word":"flesh",
+    "original":"σάρξ",
+    "transliteration":"sarx",
+    "strongs":"G4561",
+    "category":"Transformation",
+    "meaning":"Flesh, human nature, sinful desires.",
+    "study":"Paul contrasts living according to the flesh with living according to the Spirit."
+},
+
+{
+    "word":"freedom",
+    "original":"ἐλευθερία",
+    "transliteration":"eleutheria",
+    "strongs":"G1657",
+    "category":"Salvation",
+    "meaning":"Freedom, liberty, release from bondage.",
+    "study":"Christian freedom is liberation from sin so believers can serve God and others in love."
+},
+
+{
+    "word":"bondage",
+    "original":"δουλεία",
+    "transliteration":"douleia",
+    "strongs":"G1397",
+    "category":"Salvation",
+    "meaning":"Slavery, servitude, bondage.",
+    "study":"Scripture describes sin as bondage and Christ as the One who brings true freedom."
+},
+
+{
+    "word":"adoption",
+    "original":"υἱοθεσία",
+    "transliteration":"huiothesia",
+    "strongs":"G5206",
+    "category":"Identity",
+    "meaning":"Adoption, placement as a son, receiving family status.",
+    "study":"Believers are adopted into God's family through Christ and receive the identity of God's children."
+},
+
+{
+    "word":"inheritance",
+    "original":"κληρονομία",
+    "transliteration":"klēronomia",
+    "strongs":"G2817",
+    "category":"Kingdom",
+    "meaning":"Inheritance, possession, promised share.",
+    "study":"The New Testament describes believers as receiving an inheritance through Christ that is eternal and secure."
+},
+
+{
+    "word":"glorify",
+    "original":"δοξάζω",
+    "transliteration":"doxazō",
+    "strongs":"G1392",
+    "category":"Worship",
+    "meaning":"To glorify, honour, magnify.",
+    "study":"To glorify God means to reveal His greatness and give Him the honour He deserves."
+},
+
+{
+    "word":"humility",
+    "original":"ταπεινοφροσύνη",
+    "transliteration":"tapeinophrosynē",
+    "strongs":"G5012",
+    "category":"Character",
+    "meaning":"Humility, lowliness of mind, modesty.",
+    "study":"Biblical humility is not self-hatred but rightly recognising one's dependence on God."
+},
+
+{
+    "word":"faithful",
+    "original":"πιστός",
+    "transliteration":"pistos",
+    "strongs":"G4103",
+    "category":"Character",
+    "meaning":"Faithful, trustworthy, reliable.",
+    "study":"God is faithful in His promises, and believers are called to reflect that faithfulness."
+},
+
+{
+    "word":"obedience",
+    "original":"ὑπακοή",
+    "transliteration":"hypakoē",
+    "strongs":"G5218",
+    "category":"Discipleship",
+    "meaning":"Obedience, listening under authority, submission.",
+    "study":"Biblical obedience flows from faith and love rather than mere external rule-following."
+},
+
+{
+    "word":"deny",
+    "original":"ἀρνέομαι",
+    "transliteration":"arneomai",
+    "strongs":"G720",
+    "category":"Discipleship",
+    "meaning":"To deny, reject, refuse acknowledgement.",
+    "study":"Jesus calls disciples to deny themselves, surrendering personal desires to follow Him."
+},
+
+{
+    "word":"follow",
+    "original":"ἀκολουθέω",
+    "transliteration":"akoloutheō",
+    "strongs":"G190",
+    "category":"Discipleship",
+    "meaning":"To follow, accompany, become a disciple.",
+    "study":"Following Jesus means more than belief; it involves a life of surrender and imitation."
+},
+
+{
+    "word":"remain",
+    "original":"μένω",
+    "transliteration":"menō",
+    "strongs":"G3306",
+    "category":"Discipleship",
+    "meaning":"To remain, continue, stay, abide.",
+    "study":"Jesus repeatedly calls believers to remain in Him as the source of spiritual life and fruitfulness."
+}
