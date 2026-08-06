@@ -656,10 +656,38 @@ header p {
 
 
     z-index:99999;
+position:relative;
+}
+
+.close-word-box {
+
+    position:absolute;
+
+    top:12px;
+
+    right:15px;
+
+
+    background:none;
+
+    border:none;
+
+
+    font-size:22px;
+
+    cursor:pointer;
+
+
+    color:#b8863b;
 
 }
 
 
+.close-word-box:hover {
+
+    color:#111;
+
+}
 
 .note-box textarea {
 
