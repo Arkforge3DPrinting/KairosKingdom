@@ -1394,3 +1394,67 @@ header p {
         0 5px 15px rgba(0,0,0,.05);
 
 }
+/* =========================
+   DAILY VERSE CARD
+========================= */
+
+.daily-verse {
+
+    margin:25px auto 0;
+
+    max-width:600px;
+
+    padding:20px 25px;
+
+    background:
+        rgba(255,250,240,.75);
+
+    backdrop-filter:
+        blur(12px);
+
+    border-radius:22px;
+
+    border:
+        1px solid rgba(184,134,59,.25);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+.daily-title {
+
+    font-weight:700;
+
+    color:#8c641d;
+
+    margin-bottom:12px;
+
+    font-size:1.1rem;
+
+}
+
+
+#dailyVerseText {
+
+    font-size:1.2rem;
+
+    line-height:1.7;
+
+    color:#4b3825;
+
+    font-style:italic;
+
+}
+
+
+#dailyVerseReference {
+
+    margin-top:12px;
+
+    font-weight:bold;
+
+    color:#5b3a1e;
+
+}
