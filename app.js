@@ -817,18 +817,7 @@ function openWordStudy(){
     `;
 
 }
-function searchWordStudy(){
 
-    const query = document
-        .getElementById("wordSearchInput")
-        .value
-        .toLowerCase()
-        .trim();
-
-
-    if(!query){
-        return;
-    }
 
 
     const result = wordStudyData.find(word =>
@@ -853,58 +842,7 @@ function searchWordStudy(){
     }
 }
 
-    const output =
-    document.getElementById("wordContent");
-
-
-    if(!result){
-
-        output.innerHTML = `
-            <p>
-            No word found for:
-            <strong>${query}</strong>
-            </p>
-        `;
-
-        return;
-    }
-
-
-
-
-    output.innerHTML = `
-
-        <h3>
-            ${result.word}
-        </h3>
-
-        <p>
-            <strong>Original:</strong>
-            ${result.original}
-        </p>
-
-        <p>
-            <strong>Transliteration:</strong>
-            ${result.transliteration}
-        </p>
-
-        <p>
-            <strong>Strong's:</strong>
-            ${result.strongs}
-        </p>
-
-        <p>
-            <strong>Meaning:</strong>
-            ${result.meaning}
-        </p>
-
-        <p>
-            <strong>Study:</strong>
-            ${result.study}
-        </p>
-
-    `;
-
+    
 }
 function backFromWordStudy(){
 
