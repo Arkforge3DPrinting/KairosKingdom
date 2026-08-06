@@ -706,11 +706,6 @@ document
 .getElementById("wordStudyButton")
 .onclick = openWordStudy;
 
-document
-.getElementById("wordSearchButton")
-.onclick = searchWordStudy;
-
-
 const backWordButton =
 document.getElementById("backWordBibleButton");
 
