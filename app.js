@@ -886,40 +886,7 @@ function searchWord(){
     }
 
 
-    output.innerHTML = `
 
-    <h2>
-        ${result.word}
-    </h2>
-
-    <p>
-    <strong>Original:</strong>
-    ${result.original}
-    </p>
-
-    <p>
-    <strong>Transliteration:</strong>
-    ${result.transliteration}
-    </p>
-
-    <p>
-    <strong>Strong's:</strong>
-    ${result.strongs}
-    </p>
-
-    <p>
-    <strong>Meaning:</strong>
-    ${result.meaning}
-    </p>
-
-    <p>
-    <strong>Study:</strong>
-    ${result.study}
-    </p>
-
-    `;
-
-}
 
     output.innerHTML = `
 
@@ -1044,9 +1011,6 @@ function searchWord(){
     </p>
 
     `;
-
-}
-function closeWordStudy(){
 
     document.getElementById("wordBox").style.display = "none";
 
