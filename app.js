@@ -708,3 +708,56 @@ if(backButton){
     backButton.onclick = backToBible;
 
 }
+function loadDailyVerse(){
+
+    const verses = [
+
+        {
+            text:
+            "Thy word is a lamp unto my feet, and a light unto my path.",
+            reference:
+            "Psalm 119:105"
+        },
+
+        {
+            text:
+            "I can do all things through Christ which strengtheneth me.",
+            reference:
+            "Philippians 4:13"
+        },
+
+        {
+            text:
+            "Trust in the LORD with all thine heart; and lean not unto thine own understanding.",
+            reference:
+            "Proverbs 3:5"
+        },
+
+        {
+            text:
+            "The LORD is my shepherd; I shall not want.",
+            reference:
+            "Psalm 23:1"
+        }
+
+    ];
+
+
+    const today = new Date();
+
+    const index =
+        today.getDate() %
+        verses.length;
+
+
+    document.getElementById("dailyVerseText").textContent =
+        verses[index].text;
+
+
+    document.getElementById("dailyVerseReference").textContent =
+        verses[index].reference;
+
+}
+
+
+loadDailyVerse();
