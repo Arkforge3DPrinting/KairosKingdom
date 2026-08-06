@@ -1031,4 +1031,9 @@ function closeWordStudy(){
     document.getElementById("wordBox").style.display = "none";
 
 }
+function closeWordStudy(){
+
+    document.getElementById("wordBox").style.display="none";
+
+}
 loadDailyVerse();
