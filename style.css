@@ -1458,3 +1458,69 @@ header p {
     color:#5b3a1e;
 
 }
+/* =========================
+   VERSE OF THE DAY
+========================= */
+
+.daily-verse {
+
+    margin:18px auto 0;
+
+    width:min(650px,90%);
+
+    padding:12px 20px;
+
+    background:
+        rgba(255,250,240,.55);
+
+    backdrop-filter:
+        blur(10px);
+
+    border-radius:18px;
+
+    border:
+        1px solid rgba(184,134,59,.2);
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.06);
+
+}
+
+
+.daily-title {
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    color:#8c641d;
+
+    margin-bottom:5px;
+
+}
+
+
+#dailyVerseText {
+
+    font-size:1rem;
+
+    font-style:italic;
+
+    color:#4b3825;
+
+    line-height:1.5;
+
+}
+
+
+#dailyVerseReference {
+
+    margin-top:5px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    color:#8c641d;
+
+}
