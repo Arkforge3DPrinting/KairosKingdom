@@ -1026,4 +1026,9 @@ function searchWord(){
     `;
 
 }
+function closeWordStudy(){
+
+    document.getElementById("wordBox").style.display = "none";
+
+}
 loadDailyVerse();
