@@ -670,24 +670,20 @@ position:relative;
 }
 .close-word-box {
 
-    position:absolute;
+    width: 35px;
+    height: 35px;
 
-    top:12px;
+    padding: 0;
 
-    right:15px;
+    border-radius: 50%;
 
+    font-size: 20px;
 
-    background:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    border:none;
-
-
-    font-size:22px;
-
-    cursor:pointer;
-
-
-    color:#b8863b;
+    cursor: pointer;
 
 }
 
