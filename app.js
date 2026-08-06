@@ -947,4 +947,88 @@ function backFromWordStudy(){
     document.getElementById("wordStudyPanel").style.display="none";
 
 }
+function searchWord(){
+
+    const query = document
+        .getElementById("wordSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    if(!query){
+        return;
+    }
+
+
+    const result = wordStudyData.find(word =>
+
+        word.word.toLowerCase() === query ||
+        word.transliteration.toLowerCase() === query
+
+    );
+
+
+    const content =
+        document.getElementById("wordContent");
+
+
+    if(!result){
+
+        content.innerHTML = `
+
+        <h3>
+            No word found
+        </h3>
+
+        <p>
+            Try: abide, faith, love, grace, kingdom
+        </p>
+
+        `;
+
+        return;
+
+    }
+
+
+    content.innerHTML = `
+
+    <h2>
+        ${result.word}
+    </h2>
+
+
+    <p>
+        <strong>Original:</strong>
+        ${result.original}
+    </p>
+
+
+    <p>
+        <strong>Transliteration:</strong>
+        ${result.transliteration}
+    </p>
+
+
+    <p>
+        <strong>Strong's:</strong>
+        ${result.strongs}
+    </p>
+
+
+    <p>
+        <strong>Meaning:</strong>
+        ${result.meaning}
+    </p>
+
+
+    <p>
+        <strong>Study:</strong>
+        ${result.study}
+    </p>
+
+    `;
+
+}
 loadDailyVerse();
