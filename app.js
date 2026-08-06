@@ -13,6 +13,8 @@ const wordResponse = await fetch("word-study.json");
 
 wordStudyData = await wordResponse.json();
 
+console.log("Word Study Loaded:", wordStudyData.length);
+
     const books = [...new Set(
         bibleVerses.map(v => v.book_name)
     )];
@@ -818,32 +820,6 @@ function openWordStudy(){
 
 }
 
-
-
-    const result = wordStudyData.find(word =>
-        word.word.toLowerCase() === query ||
-        word.transliteration.toLowerCase() === query
-    );
-
-
-    const output =
-    document.getElementById("wordStudyResult");
-
-
-    if(!result){
-
-        output.innerHTML = `
-            <p>
-            No word found for "<strong>${query}</strong>"
-            </p>
-        `;
-
-        return;
-    }
-}
-
-    
-}
 function backFromWordStudy(){
 
     document.querySelector(".layout").style.display="grid";
@@ -867,8 +843,8 @@ function searchWord(){
 
     const result = wordStudyData.find(word =>
 
-        word.word.toLowerCase() === query ||
-        word.transliteration.toLowerCase() === query
+        word.word?.toLowerCase() === query ||
+        word.transliteration?.toLowerCase() === query
 
     );
 
@@ -905,36 +881,34 @@ function searchWord(){
 
     <p>
         <strong>Original:</strong>
-        ${result.original}
+        ${result.original || ""}
     </p>
 
 
     <p>
         <strong>Transliteration:</strong>
-        ${result.transliteration}
+        ${result.transliteration || ""}
     </p>
 
 
     <p>
         <strong>Strong's:</strong>
-        ${result.strongs}
+        ${result.strongs || ""}
     </p>
 
 
     <p>
         <strong>Meaning:</strong>
-        ${result.meaning}
+        ${result.meaning || ""}
     </p>
 
 
     <p>
         <strong>Study:</strong>
-        ${result.study}
+        ${result.study || ""}
     </p>
 
     `;
-
-    document.getElementById("wordBox").style.display = "none";
 
 }
 function closeWordStudy(){
