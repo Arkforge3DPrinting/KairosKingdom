@@ -1,6 +1,6 @@
 let bibleVerses = [];
 let selectedVerse = null;
-
+let wordStudyData = [];
 
 async function loadBible(){
 
@@ -9,7 +9,9 @@ async function loadBible(){
     const bible = await response.json();
 
     bibleVerses = bible.verses;
+const wordResponse = await fetch("word-study.json");
 
+wordStudyData = await wordResponse.json();
 
     const books = [...new Set(
         bibleVerses.map(v => v.book_name)
@@ -758,6 +760,30 @@ function loadDailyVerse(){
         verses[index].reference;
 
 }
+function openWordStudy(){
 
+    document.getElementById("verseMenu").style.display="none";
+
+    document.getElementById("wordBox").style.display="block";
+
+
+    document.getElementById("wordContent").innerHTML = `
+
+    <p>
+    Type a word to study:
+    </p>
+
+    <input 
+    id="wordSearch"
+    placeholder="Example: abide"
+    >
+
+    <button onclick="searchWord()">
+    Search
+    </button>
+
+    `;
+
+}
 
 loadDailyVerse();
