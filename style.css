@@ -1557,3 +1557,25 @@ header p {
     box-shadow:0 0 8px rgba(124,92,255,0.3);
 
 }
+.close-word-box {
+
+    position: absolute;
+    top: 10px;
+    right: 12px;
+
+    background: transparent;
+    border: none;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    color: #b8863b;
+
+}
+
+
+.close-word-box:hover {
+
+    color: white;
+
+}
