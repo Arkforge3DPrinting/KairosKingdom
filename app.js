@@ -837,7 +837,74 @@ function searchWordStudy(){
 
         return;
     }
+function searchWord(){
 
+    const query = document
+        .getElementById("wordSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    const result = wordStudyData.find(word =>
+
+        word.word.toLowerCase() === query ||
+        word.transliteration.toLowerCase() === query
+
+    );
+
+
+    const output =
+    document.getElementById("wordContent");
+
+
+    if(!result){
+
+        output.innerHTML = `
+            <p>
+            No word found for:
+            <strong>${query}</strong>
+            </p>
+        `;
+
+        return;
+    }
+
+
+    output.innerHTML = `
+
+    <h2>
+        ${result.word}
+    </h2>
+
+    <p>
+    <strong>Original:</strong>
+    ${result.original}
+    </p>
+
+    <p>
+    <strong>Transliteration:</strong>
+    ${result.transliteration}
+    </p>
+
+    <p>
+    <strong>Strong's:</strong>
+    ${result.strongs}
+    </p>
+
+    <p>
+    <strong>Meaning:</strong>
+    ${result.meaning}
+    </p>
+
+    <p>
+    <strong>Study:</strong>
+    ${result.study}
+    </p>
+
+    `;
+
+}
 
     output.innerHTML = `
 
