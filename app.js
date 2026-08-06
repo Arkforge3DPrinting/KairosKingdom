@@ -851,6 +851,7 @@ function searchWordStudy(){
 
         return;
     }
+}
 function searchWord(){
 
     const query = document
