@@ -783,7 +783,7 @@ function openWordStudy(){
     document.getElementById("wordContent").innerHTML = `
 
     <p>
-    Type a word to study:
+   🔎 Explore the original meaning of Biblical words. 🔎
     </p>
 
     <input 
